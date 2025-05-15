@@ -12,8 +12,10 @@ import Footer from '../components/common/Footer'
 import FAQSection from '../components/core/HomePage/FAQSection'
 
 const Home = () => {
+
   return (
     <div>
+
         <HeroSection />
         <AboutSection />
         <ServicesSection />
