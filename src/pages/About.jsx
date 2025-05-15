@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import AboutHeroSection from '../components/core/AboutPage/AboutHeroSection'
 import FoundingStory from '../components/core/AboutPage/FoundingStory'
 import MissionVision from '../components/core/AboutPage/MissionVision'
@@ -8,6 +8,10 @@ import Footer from '../components/common/Footer'
 import Values from '../components/core/AboutPage/Values'
 
 const About = () => {
+  useEffect(() => {
+    document.title = "About | NexGen Energies";
+  }, [])
+
   return (
     <div>
         <AboutHeroSection />
