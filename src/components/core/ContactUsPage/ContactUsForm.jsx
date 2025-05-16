@@ -3,8 +3,8 @@ import { useForm } from "react-hook-form"
 import { toast } from "react-hot-toast"
 
 import CountryCode from "../../../data/countrycode.json"
-// import { apiConnector } from "../../../services/apiConnector"
-// import { contactusEndpoint } from "../../../services/apis"
+import { apiConnector } from "../../../services/apiConnector"
+import { contactusEndpoint } from "../../../services/apis"
 
 const ContactUsForm = () => {
   const [loading, setLoading] = useState(false)
@@ -15,42 +15,16 @@ const ContactUsForm = () => {
     formState: { errors, isSubmitSuccessful },
   } = useForm()
 
-  // const submitContactForm = async (data) => {
-  //   const toastId = toast.loading("Loading...")
-  //   setLoading(true)
-  //   try {
-  //     const res = await apiConnector(
-  //       "POST",
-  //       contactusEndpoint.CONTACT_US_API,
-  //       data
-  //     )
-  //     if(res.data.success){
-  //       toast.success("Details send successfully")
-  //     }
-
-  //   } catch (error) {
-  //     console.log("ERROR MESSAGE - ", error.message)
-  //     toast.error("Something went wrong")
-  //   }
-    
-  //   setLoading(false)
-  //   toast.dismiss(toastId)
-  // }
-
   const submitContactForm = async (data) => {
     const toastId = toast.loading("Loading...")
     setLoading(true)
-    
     try {
-      const response = await fetch("https://formspree.io/f/myzwokyz", {
-        method: "POST",
-        body: data,
-        headers: {
-          Accept: "application/json",
-        },
-      });
-
-      if (response.ok) {
+      const res = await apiConnector(
+        "POST",
+        contactusEndpoint.CONTACT_US_API,
+        data
+      )
+      if(res.data.success){
         toast.success("Details send successfully")
       }
 
@@ -58,10 +32,10 @@ const ContactUsForm = () => {
       console.log("ERROR MESSAGE - ", error.message)
       toast.error("Something went wrong")
     }
-
+    
     setLoading(false)
     toast.dismiss(toastId)
-  };
+  }
 
   useEffect(() => {
     if (isSubmitSuccessful) {
