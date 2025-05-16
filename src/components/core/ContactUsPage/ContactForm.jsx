@@ -1,5 +1,6 @@
 import React from "react";
 import ContactUsForm from "./ContactUsForm";
+import ContactUsFormMD from "./ContactUsFormMD";
 
 const ContactForm = () => {
   return (
@@ -12,7 +13,8 @@ const ContactForm = () => {
       </p>
 
       <div className="mt-7">
-        <ContactUsForm />
+        {/* <ContactUsForm /> */}
+        <ContactUsFormMD />
       </div>
     </div>
   );
