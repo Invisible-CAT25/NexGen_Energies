@@ -11,11 +11,19 @@ import Contact from './pages/Contact'
 import Projects from './pages/Projects'
 import Template from './components/core/Leaders/Template'
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+
 function App() {
+
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
 
   return (
     <div className='flex flex-col w-screen min-h-screen font-poppins bg-[#F7F9FB]'>
-      <Navbar />
+      <Navbar />  
 
       <Routes>
         <Route path='/' element={<Home />}  />

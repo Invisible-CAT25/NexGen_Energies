@@ -2,6 +2,9 @@
 
 @theme {
     --font-poppins: "Poppins", "sans-serif";
+    --color-richblue: #5078B9;
+    --color-richgreen: #4BBB93;
+
     --color-richblack-5: "#F1F2FF";
     --color-richblack-25: "#DBDDEA";
     --color-richblack-50: "#C5C7D4";
