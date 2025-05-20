@@ -1,4 +1,4 @@
-// import React from 'react'
+import React from 'react'
 import CEOImage from "../../../assets/images/Home_Assets/ceo.png"
 import bgImage from '../../../assets/images/Home_Assets/ceo_bgImage.png'
 import Icon from '../../../assets/images/Home_Assets/ceo_symbol.png'

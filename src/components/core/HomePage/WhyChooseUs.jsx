@@ -1,67 +1,94 @@
-import React from 'react'
-import HighlightText from '../../common/HighlightText';
-import bgImage from '../../../assets/images/Home_Assets/choose_us_bg.png'
-import Icon1 from '../../../assets/images/Home_Assets/subLogo1.png'
-import Icon2 from '../../../assets/images/Home_Assets/subLogo2.png'
-import Icon3 from '../../../assets/images/Home_Assets/subLogo3.png'
-import Icon4 from '../../../assets/images/Home_Assets/subLogo4.png'
-import Icon5 from '../../../assets/images/Home_Assets/subLogo5.png'
-import Icon6 from '../../../assets/images/Home_Assets/subLogo6.png'
+import React from "react";
+import HighlightText from "../../common/HighlightText";
+import bgImage from "../../../assets/images/Home_Assets/choose_us_bg.png";
+import Icon1 from "../../../assets/images/Home_Assets/subLogo1.png";
+import Icon2 from "../../../assets/images/Home_Assets/subLogo2.png";
+import Icon3 from "../../../assets/images/Home_Assets/subLogo3.png";
+import Icon4 from "../../../assets/images/Home_Assets/subLogo4.png";
+import Icon5 from "../../../assets/images/Home_Assets/subLogo5.png";
+import Icon6 from "../../../assets/images/Home_Assets/subLogo6.png";
+import { motion } from "framer-motion";
 
 const features = [
   {
-    icon: <img src={Icon1} />,
+    icon: Icon1,
     title: "Best Commercial Rooftop Solar Partner",
-    description: "Trusted by businesses for reliable, high-performance rooftop solutions."
+    description: "Trusted by businesses for reliable, high-performance rooftop solutions.",
   },
   {
-    icon: <img src={Icon2} />,
+    icon: Icon2,
     title: "Best Quality at the Right Price",
-    description: "Premium products and services that fit your budget."
+    description: "Premium products and services that fit your budget.",
   },
   {
-    icon: <img src={Icon3} />,
+    icon: Icon3,
     title: "Team of Trusted Professionals",
-    description: "Finance options designed to match your business goals."
+    description: "Finance options designed to match your business goals.",
   },
   {
-    icon: <img src={Icon4} />,
+    icon: Icon4,
     title: "Timely Project Delivery",
-    description: "We value your time. Our team ensures on-time execution with no compromises."
+    description: "We value your time. Our team ensures on-time execution with no compromises.",
   },
   {
-    icon: <img src={Icon5} />,
+    icon: Icon5,
     title: "Easy & Flexible Payments Methods",
-    description: "Premium products and services that fit your budget."
+    description: "Convenient payment options tailored for your needs.",
   },
   {
-    icon: <img src={Icon6} />,
+    icon: Icon6,
     title: "End to End Solutions Provider",
-    description: "Finance options designed to match your business goals."
+    description: "From planning to execution — we handle it all with expertise.",
   },
 ];
 
 const WhyChooseUs = () => {
   return (
-    <section className="w-11/12 mx-auto flex flex-col justify-center items-center gap-8 mt-20">
-      
-        <h2 className="text-3xl md:text-[2.5rem] font-bold">
-          <HighlightText text={"Why Choose Us?"} />
-        </h2>
+    <section
+      className="w-full flex flex-col justify-center items-center gap-12 mt-24"
+      role="region"
+      aria-label="Why choose NexGen Energies"
+    >
+      {/* Title */}
+      <motion.h2
+        className="text-3xl sm:text-4xl md:text-[2.5rem] font-bold text-center"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: false }}
+      >
+        <HighlightText text="Why Choose Us?" />
+      </motion.h2>
 
-        <div className="w-screen h-full bg-cover bg-center bg-no-repeat p-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-        style={{ backgroundImage: `url(${bgImage})`}}>
-            {features.map((feature, index) => (
-            <div
-                key={index}
-                className="bg-white rounded-xl shadow-lg p-6 text-center hover:shadow-2xl transition duration-300 flex flex-col justify-center items-center gap-6"
+      {/* Features Grid with Background */}
+      <div
+        className="w-full bg-cover bg-center bg-no-repeat px-4 py-10 md:px-10"
+        style={{ backgroundImage: `url(${bgImage})` }}
+      >
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto px-4 md:px-10">
+          {features.map((feature, index) => (
+            <motion.div
+              key={index}
+              className="bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-2xl transition duration-300 flex flex-col justify-center items-center gap-5"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              viewport={{ once: false }}
+              role="group"
+              aria-label={feature.title}
             >
-                {feature.icon}
-                <h3 className="text-2xl font-semibold w-[80%]">{feature.title}</h3>
-                <p className="text-gray-600 w-[90%] text-[17px]">{feature.description}</p>
-            </div>
-            ))}
+              <img
+                src={feature.icon}
+                alt={feature.title}
+                className="w-16 h-16 object-contain"
+                loading="lazy"
+              />
+              <h3 className="text-xl font-semibold">{feature.title}</h3>
+              <p className="text-gray-600 text-base">{feature.description}</p>
+            </motion.div>
+          ))}
         </div>
+      </div>
     </section>
   );
 };
