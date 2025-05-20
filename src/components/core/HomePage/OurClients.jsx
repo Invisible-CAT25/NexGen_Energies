@@ -3,12 +3,13 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
+import { motion } from "framer-motion";
 import HighlightText from "../../common/HighlightText";
 
-import vi from "../../../assets/images/Home_Assets/vi.png"
-import continental from "../../../assets/images/Home_Assets/continental.png"
-import rrecl from "../../../assets/images/Home_Assets/rrecl.png"
-import luminous from "../../../assets/images/Home_Assets/luminous.png"
+import vi from "../../../assets/images/Home_Assets/vi.png";
+import continental from "../../../assets/images/Home_Assets/continental.png";
+import rrecl from "../../../assets/images/Home_Assets/rrecl.png";
+import luminous from "../../../assets/images/Home_Assets/luminous.png";
 
 const clients = [
   { src: vi, alt: "Vi Telecom" },
@@ -19,19 +20,25 @@ const clients = [
 
 const ClientSlider = () => {
   return (
-    <section className="mt-20">
-      <div className="w-11/12 mx-auto text-center">
-        <h2 className="text-[2.5rem] font-bold mb-8">
-          <HighlightText text={"Our Clientele"} />
-        </h2>
+    <section className="mt-20 w-full">
+      <div className="w-11/12 mx-auto text-center px-4 md:px-8">
+        <motion.h2
+          className="text-[2.5rem] font-bold text-center mb-10"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: false }}
+        >
+          <HighlightText text="Our Clientele" />
+        </motion.h2>
 
-        <div className="border border-green-200 rounded-lg shadow-lg p-6">
+        <div className="border border-green-200 rounded-xl shadow-lg p-6 bg-white">
           <Swiper
             modules={[Pagination, Autoplay]}
             spaceBetween={30}
             slidesPerView={2}
-            autoplay={{ delay: 2500 }}
             loop
+            autoplay={{ delay: 2500 }}
             pagination={{ clickable: true }}
             breakpoints={{
               640: { slidesPerView: 2 },
@@ -41,11 +48,11 @@ const ClientSlider = () => {
           >
             {clients.map((client, idx) => (
               <SwiperSlide key={idx}>
-                <div className="flex items-center justify-center h-24">
+                <div className="h-24 flex items-center justify-center">
                   <img
                     src={client.src}
                     alt={client.alt}
-                    className="max-h-full object-contain"
+                    className="h-20 max-w-[120px] object-contain transition-transform duration-300 hover:scale-105"
                     loading="lazy"
                   />
                 </div>
