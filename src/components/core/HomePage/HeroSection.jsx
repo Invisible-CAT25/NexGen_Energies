@@ -30,7 +30,7 @@ const HeroSection = () => {
       {/* Animated Content */}
       <motion.div
         ref={ref}
-        className="relative z-20 mx-auto w-11/12 max-w-7xl mt-8 px-4 md:px-8 flex flex-col items-start justify-center"
+        className="relative z-20 mx-auto w-11/12 max-w-7xl mt-8 flex flex-col items-start justify-center"
         initial={{ opacity: 0, y: 60 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.8, ease: "easeOut" }}

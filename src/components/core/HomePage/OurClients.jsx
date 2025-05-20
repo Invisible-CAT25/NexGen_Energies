@@ -21,7 +21,7 @@ const clients = [
 const ClientSlider = () => {
   return (
     <section className="mt-20 w-full">
-      <div className="w-11/12 mx-auto text-center px-4 md:px-8">
+      <div className="w-11/12 mx-auto text-center">
         <motion.h2
           className="text-[2.5rem] font-bold text-center mb-10"
           initial={{ opacity: 0, y: 40 }}

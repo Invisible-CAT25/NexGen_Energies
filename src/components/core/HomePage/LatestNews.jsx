@@ -16,16 +16,16 @@ const awards = [
     alt: "Award Ceremony Image",
   },
   {
-    title: "Ranked Among India's Top Solar EPC Providers",
-    description: "Acknowledged for delivering end-to-end solar solutions with high ROI.",
+    title: "Won Best Commercial Rooftop Installation Company Award",
+    description: "Recognized for excellence in large-scale rooftop installations across India.",
     image: latestNews,
-    alt: "Award Image",
+    alt: "Award Ceremony Image",
   },
   {
-    title: "Green Energy Leadership Award 2024",
-    description: "Awarded for promoting sustainable infrastructure and clean tech innovation.",
+    title: "Won Best Commercial Rooftop Installation Company Award",
+    description: "Recognized for excellence in large-scale rooftop installations across India.",
     image: latestNews,
-    alt: "Award Presentation",
+    alt: "Award Ceremony Image",
   },
 ];
 
@@ -36,7 +36,7 @@ const LatestNews = () => {
       role="region"
       aria-label="NexGen Energies Awards and Recognition"
     >
-      <div className="w-11/12 mx-auto flex flex-col items-center gap-8 px-4 md:px-8">
+      <div className="w-11/12 mx-auto flex flex-col items-center gap-8">
         {/* Section Heading */}
         <motion.h2
           className="text-[2.5rem] font-bold text-center"

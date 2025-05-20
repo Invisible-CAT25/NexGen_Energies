@@ -15,7 +15,7 @@ function Navbar() {
 
   return (
     <header className="bg-white shadow-md fixed top-0 left-0 right-0 z-50 transition-all duration-300">
-      <div className="mx-auto flex h-16 w-11/12 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto flex h-16 w-11/12 max-w-7xl items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center">
           <img

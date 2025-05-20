@@ -16,7 +16,7 @@ const AboutSection = () => {
     >
       <motion.div
         ref={ref}
-        className="flex flex-col lg:flex-row items-center justify-between gap-12 w-11/12 max-w-7xl mx-auto px-4 md:px-8"
+        className="flex flex-col lg:flex-row items-center justify-between gap-12 w-11/12 max-w-7xl mx-auto"
         initial={{ opacity: 0, y: 60 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.8 }}

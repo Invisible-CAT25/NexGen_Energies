@@ -29,7 +29,7 @@ const FAQSection = () => {
   }, [search]);
 
   return (
-    <section className="w-11/12 mx-auto mt-20 px-4 md:px-8" aria-label="Frequently Asked Questions">
+    <section className="w-11/12 mx-auto mt-20" aria-label="Frequently Asked Questions">
       {/* Heading with animation */}
       <motion.h2
         className="text-[2.5rem] font-bold text-center mb-6"

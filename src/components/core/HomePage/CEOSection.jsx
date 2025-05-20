@@ -13,7 +13,7 @@ const CEOSection = () => {
       role="region"
       aria-label="CEO Introduction Section"
     >
-      <div className="flex flex-col-reverse lg:flex-row items-end justify-between w-11/12 mx-auto lg:gap-10 px-4 md:px-8">
+      <div className="flex flex-col-reverse lg:flex-row items-end justify-between w-11/12 mx-auto lg:gap-10">
         {/* Text Content */}
         <motion.div
           className="bg-[#5078B9] w-full lg:w-1/2 rounded-md p-6 relative shadow-lg flex flex-col gap-6 -bottom-5"

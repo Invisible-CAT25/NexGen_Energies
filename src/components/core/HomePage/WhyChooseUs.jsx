@@ -62,10 +62,10 @@ const WhyChooseUs = () => {
 
       {/* Features Grid with Background */}
       <div
-        className="w-full bg-cover bg-center bg-no-repeat px-4 py-10 md:px-10"
+        className="w-full bg-cover bg-center bg-no-repeat py-10"
         style={{ backgroundImage: `url(${bgImage})` }}
       >
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto px-4 md:px-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-11/12 max-w-7xl mx-auto">
           {features.map((feature, index) => (
             <motion.div
               key={index}

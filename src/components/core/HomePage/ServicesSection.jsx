@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 const ServicesSection = () => {
   return (
     <section
-      className="w-11/12 max-w-7xl mx-auto flex flex-col items-center gap-12 mt-24 px-4 md:px-8"
+      className="w-11/12 max-w-7xl mx-auto flex flex-col items-center gap-12 mt-24"
       role="region"
       aria-label="Our services section"
     >

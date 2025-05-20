@@ -37,7 +37,7 @@ const timeline = [
 const GoSolar = () => {
   return (
     <section
-      className="w-11/12 mx-auto flex flex-col justify-center items-center gap-12 mt-24 px-4 md:px-8"
+      className="w-11/12 mx-auto flex flex-col justify-center items-center gap-12 mt-24"
       role="region"
       aria-label="Reasons to go solar"
     >
