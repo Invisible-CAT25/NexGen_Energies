@@ -7,15 +7,15 @@ import { motion } from "framer-motion";
 import HighlightText from "../../common/HighlightText";
 
 import vi from "../../../assets/images/Home_Assets/vi.png";
-import continental from "../../../assets/images/Home_Assets/continental.png";
+import continental from "../../../assets/images/Home_Assets/continental4.svg";
 import rrecl from "../../../assets/images/Home_Assets/rrecl.png";
 import luminous from "../../../assets/images/Home_Assets/luminous.png";
 
 const clients = [
-  { src: vi, alt: "Vi Telecom" },
-  { src: continental, alt: "Continental Tyres" },
-  { src: rrecl, alt: "RRECL Government Client" },
-  { src: luminous, alt: "Luminous Energy" },
+  { src: continental, alt: "Continental Tyres", height: "h-28" },
+  { src: rrecl, alt: "RRECL Government Client", height: "h-28" },
+  { src: luminous, alt: "Luminous Energy", height: "h-28" },
+  { src: vi, alt: "Vi Telecom", height: "h-20" },
 ];
 
 const ClientSlider = () => {
@@ -32,7 +32,8 @@ const ClientSlider = () => {
           <HighlightText text="Our Clientele" />
         </motion.h2>
 
-        <div className="border border-green-200 rounded-xl shadow-lg p-6 bg-white">
+        <div className="rounded-xl p-6 bg-white"
+        style={{ boxShadow: "0 4px 20px rgba(34, 197, 94, 0.3)" }}>
           <Swiper
             modules={[Pagination, Autoplay]}
             spaceBetween={30}
@@ -52,7 +53,7 @@ const ClientSlider = () => {
                   <img
                     src={client.src}
                     alt={client.alt}
-                    className="h-20 max-w-[120px] object-contain transition-transform duration-300 hover:scale-105"
+                    className={`${client.height} max-w-[120px] object-contain transition-transform duration-300 hover:scale-105`}
                     loading="lazy"
                   />
                 </div>

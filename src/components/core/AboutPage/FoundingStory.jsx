@@ -1,6 +1,5 @@
 import React from 'react'
-import foundingStory from "../../../assets/images/About_Assets/founding_story.png"
-import logo from "../../../assets/images/About_Assets/logo.png"
+import foundingStory from "../../../assets/images/About_Assets/founding_story2.png"
 import HighlightText from "../../common/HighlightText"
 
 const FoundingStory = () => {
@@ -12,7 +11,6 @@ const FoundingStory = () => {
               src={foundingStory}
               alt=""
             />
-            <img src={logo} className='absolute z-10 top-[30%] left-[14%] h-25 ' />
           </div>
           <div className="lg:w-[60%] flex gap-5 flex-col">
             <h2 className="lg:w-[90%] text-[2.5rem] font-semibold">

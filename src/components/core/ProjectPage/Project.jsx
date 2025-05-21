@@ -3,7 +3,7 @@ import React from 'react'
 import continental from "../../../assets/images/project.png" 
 import HighlightText from '../../common/HighlightText';
 
-const Project = ({active}) => {
+const Project = ({active, name}) => {
   return (
     <div>
         <div className={`flex flex-col lg:flex-row gap-8 items-center w-11/12 mx-auto justify-between mt-20 ${active ? "lg:flex-row-reverse" : "lg:flex-row"}`}>
@@ -15,7 +15,7 @@ const Project = ({active}) => {
           </div>
           <div className="lg:w-[60%] flex gap-5 flex-col">
             <h2 className="lg:w-[90%]">
-                <HighlightText text={"Continental"} />
+                <HighlightText text={name} />
             </h2>
 
             <p className="text-[17px] w-[90%] text-[#6C6969]">

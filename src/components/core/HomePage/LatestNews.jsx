@@ -59,7 +59,7 @@ const LatestNews = () => {
           <Swiper
             modules={[Pagination, Autoplay]}
             spaceBetween={30}
-            loop
+            loop={true}
             autoplay={{ delay: 3000 }}
             pagination={{ clickable: true }}
             breakpoints={{
@@ -70,7 +70,8 @@ const LatestNews = () => {
           >
             {awards.map((award, index) => (
               <SwiperSlide key={index}>
-                <article className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300 flex flex-col h-full min-h-[430px]">
+                <article className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300 flex flex-col h-full min-h-[430px]"
+                style={{ boxShadow: "0 4px 20px rgba(34, 197, 94, 0.3)" }}>
                   <div className="p-5 flex-1 flex flex-col justify-between">
                     <h3 className="text-xl font-semibold text-center mb-2">
                       {award.title}

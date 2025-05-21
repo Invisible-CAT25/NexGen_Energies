@@ -14,12 +14,12 @@ const Projects = () => {
     <div>
         <ProjectHeroSection />
 
-        <Project />
-        <Project active={true} />
-        <Project />
-        <Project active={true} />
+        <Project name={"Continental"} />
+        <Project active={true} name={"Continental"}/>
+        <Project name={"Continental"}/>
+        <Project active={true} name={"Continental"}/>
 
-        <Map />
+        {/* <Map /> */}
         <Footer />
 
     </div>

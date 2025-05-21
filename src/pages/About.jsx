@@ -6,16 +6,23 @@ import Leaders from '../components/core/AboutPage/Leaders'
 import OurClients from '../components/core/HomePage/OurClients'
 import Footer from '../components/common/Footer'
 import Values from '../components/core/AboutPage/Values'
+import AboutHeroSectionMD from '../components/core/AboutPage/AboutHeroSectionMD'
+import FoundingStoryMD from '../components/core/AboutPage/FoundingStoryMD'
 
 const About = () => {
   useEffect(() => {
     document.title = "About | NexGen Energies";
+    window.scrollTo(0, 0);
   }, [])
 
   return (
     <div>
-        <AboutHeroSection />
-        <FoundingStory />
+        {/* <AboutHeroSection /> */}
+        <AboutHeroSectionMD />
+
+        {/* <FoundingStory /> */}
+        <FoundingStoryMD />
+
         <MissionVision />
         <Leaders />
         <Values />

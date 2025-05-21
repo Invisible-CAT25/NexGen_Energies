@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import headerImage from "../../../assets/images/About_Assets/headerImage.png";
 
-const ProjectHeroSection = () => {
+const AboutHeroSectionMD = () => {
   return (
     <section
       className="w-full h-[24rem] bg-cover bg-center bg-no-repeat flex items-center justify-center text-white"
@@ -19,10 +19,10 @@ const ProjectHeroSection = () => {
           textShadow: "0px 6px 4px rgba(0, 128, 0, 0.3)",
         }}
       >
-        Our Projects
+        About NexGen
       </motion.h1>
     </section>
   );
 };
 
-export default ProjectHeroSection;
+export default AboutHeroSectionMD;

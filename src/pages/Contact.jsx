@@ -1,6 +1,6 @@
 import React from "react"
 
-// import Footer from "../components/common/Footer"
+import Footer from "../components/common/Footer"
 import ContactDetails from "../components/core/ContactUsPage/ContactDetails"
 import ContactForm from "../components/core/ContactUsPage/ContactForm"
 
@@ -18,7 +18,7 @@ const Contact = () => {
           <ContactForm />
         </div>
       </div>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   )
 }

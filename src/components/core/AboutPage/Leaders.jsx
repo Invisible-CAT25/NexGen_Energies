@@ -2,6 +2,9 @@ import React from 'react'
 import HighlightText from '../../common/HighlightText';
 import bgImage from '../../../assets/images/Home_Assets/choose_us_bg.png'
 import leader from '../../../assets/images/About_Assets/leader.png'
+import leader2 from '../../../assets/images/About_Assets/leader2.png'
+import leader3 from '../../../assets/images/About_Assets/leader3.png'
+import leader4 from '../../../assets/images/About_Assets/leader4.png'
 import icon from '../../../assets/images/About_Assets/join_icon.png'
 
 const features = [
@@ -11,18 +14,18 @@ const features = [
         description: "-CEO"
     },
     {
-        icon: <img src={leader} />,
+        icon: <img src={leader2} />,
+        title: "Vikas Kumar",
+        description: "-CFO"
+    },
+    {
+        icon: <img src={leader3} />,
         title: "Neeraj Kumar",
         description: "-CEO"
     },
     {
-        icon: <img src={leader} />,
-        title: "Neeraj Kumar",
-        description: "-CEO"
-    },
-    {
-        icon: <img src={leader} />,
-        title: "Neeraj Kumar",
+        icon: <img src={leader4} />,
+        title: "Ravi Kumar",
         description: "-CEO"
     },
     {

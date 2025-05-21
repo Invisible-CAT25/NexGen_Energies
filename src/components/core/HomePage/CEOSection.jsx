@@ -16,7 +16,7 @@ const CEOSection = () => {
       <div className="flex flex-col-reverse lg:flex-row items-end justify-between w-11/12 mx-auto lg:gap-10">
         {/* Text Content */}
         <motion.div
-          className="bg-[#5078B9] w-full lg:w-1/2 rounded-md p-6 relative shadow-lg flex flex-col gap-6 -bottom-5"
+          className="bg-richblue w-full lg:w-1/2 rounded-md p-6 relative shadow-lg flex flex-col gap-6 -bottom-5 min-h-[520px]"
           initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
@@ -31,7 +31,7 @@ const CEOSection = () => {
           />
 
           {/* Name and Role */}
-          <div className="mt-10 border-l-4 border-white pl-4">
+          <div className="mt-10 border-l-8 border-white pl-4">
             <h3 className="text-4xl sm:text-5xl font-bold leading-tight">NEERAJ KUMAR</h3>
             <p className="text-xl sm:text-2xl font-semibold mt-1">CEO</p>
           </div>
@@ -49,7 +49,7 @@ const CEOSection = () => {
 
         {/* CEO Image */}
         <motion.div
-          className="w-full lg:w-1/2 flex justify-center"
+          className="w-full lg:w-1/2 flex justify-center items-stretch"
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
@@ -58,7 +58,7 @@ const CEOSection = () => {
           <img
             src={CEOImage}
             alt="CEO Neeraj Kumar - NexGen Energies"
-            className="w-full max-w-md object-contain"
+            className="h-full w-auto object-contain"
             loading="lazy"
           />
         </motion.div>
