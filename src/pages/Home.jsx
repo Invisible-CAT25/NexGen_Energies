@@ -29,7 +29,7 @@ const Home = () => {
 
   return (
     <main className="snap-y snap-mandatory h-screen overflow-y-scroll scroll-smooth overflow-x-hidden">
-      <Suspense fallback={<div className="text-center mt-20">Loading...</div>}>
+      <Suspense fallback={<div className="min-h-screen flex items-center justify-center">Loading...</div>}>
         <section className="snap-start">
           <HeroSection />
         </section>

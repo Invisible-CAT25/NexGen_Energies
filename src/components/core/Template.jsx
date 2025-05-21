@@ -1,7 +1,7 @@
 import React from 'react'
-import image from '../../../assets/images/NeerajKumar.png'
+// import image from '../../assets/images/NeerajKumar.png'
 
-const Template = () => {
+const Template = ({image, name, designation}) => {
   return (
     <div className='w-11/12 h-full flex flex-col items-start justify-between mt-20 mx-auto gap-8'> 
         <div className='flex items-center'>
@@ -10,8 +10,8 @@ const Template = () => {
 
                 <div className='hidden lg:block'>
                     <div className='flex flex-col bg-gradient-to-b from-[#5078B9] to-[#4BBB93] gap-3 py-10 rounded-lg px-8 absolute top-30 -right-75'>
-                        <p className='font-semibold text-4xl text-white'>NEERAJ KUMAR</p>
-                        <p className='text-white text-2xl'>-CEO</p>
+                        <p className='font-semibold text-4xl text-white'>{name}</p>
+                        <p className='text-white text-2xl'>{designation}</p>
                     </div>
                 </div>
             </div>

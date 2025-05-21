@@ -77,7 +77,7 @@ const OurValues = () => {
         transition={{ duration: 0.5, delay: 0.3 }}
         viewport={{ once: false }}
       >
-        <Button linkto="/services-we-offer" aria-label="View all services">
+        <Button linkto="/about-us" aria-label="View all services">
           Know More
         </Button>
       </motion.div>

@@ -5,7 +5,7 @@ export const NavbarLinks = [
   },
   {
     title: "Services",
-    path: "/services-we-offer",
+    path: "/services",
   },
   {
     title: "Financial Solutions",
@@ -17,7 +17,7 @@ export const NavbarLinks = [
   },
   {
     title: "Career",
-    path: "/career",
+    path: "/careers",
   },
   {
     title: "Contact",

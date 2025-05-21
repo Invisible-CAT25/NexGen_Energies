@@ -45,9 +45,9 @@ const ServicesSection = () => {
           </h3>
 
           <div className="flex flex-col md:flex-row gap-4 md:items-center">
-            <ServiceBtn linkto="/services-we-offer">OPEX Model</ServiceBtn>
-            <ServiceBtn linkto="/services-we-offer">CAPEX Model</ServiceBtn>
-            <ServiceBtn linkto="/services-we-offer">Deferred CAPEX Model</ServiceBtn>
+            <ServiceBtn linkto="/financial-solutions">OPEX Model</ServiceBtn>
+            <ServiceBtn linkto="/financial-solutions">CAPEX Model</ServiceBtn>
+            <ServiceBtn linkto="/financial-solutions">Deferred CAPEX Model</ServiceBtn>
           </div>
         </div>
 
@@ -75,7 +75,7 @@ const ServicesSection = () => {
             Power Transmission
           </h3>
 
-          <ServiceBtn linkto="/services-we-offer">Power and Civil Services</ServiceBtn>
+          <ServiceBtn linkto="/financial-solutions">Power and Civil Services</ServiceBtn>
         </div>
 
         {/* Overlay */}
@@ -89,7 +89,7 @@ const ServicesSection = () => {
         transition={{ duration: 0.5, delay: 0.3 }}
         viewport={{ once: false }}
       >
-        <Button linkto="/services-we-offer" aria-label="View all services">
+        <Button linkto="/services" aria-label="View all services">
           Know More
         </Button>
       </motion.div>

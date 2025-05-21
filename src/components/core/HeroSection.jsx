@@ -1,8 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
-import headerImage from "../../../assets/images/About_Assets/headerImage.png";
+import headerImage from "../../assets/images/About_Assets/headerImage.png";
 
-const AboutHeroSectionMD = () => {
+const HeroSection = ({title}) => {
   return (
     <section
       className="w-full h-[24rem] bg-cover bg-center bg-no-repeat flex items-center justify-center text-white"
@@ -15,14 +15,15 @@ const AboutHeroSectionMD = () => {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, ease: "easeOut" }}
+        viewport={{ once: true }}
         style={{
           textShadow: "0px 6px 4px rgba(0, 128, 0, 0.3)",
         }}
       >
-        About NexGen
+        {title}
       </motion.h1>
     </section>
   );
 };
 
-export default AboutHeroSectionMD;
+export default HeroSection;
