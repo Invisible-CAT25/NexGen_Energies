@@ -44,7 +44,7 @@ const CEOSection = () => {
           </p>
 
           {/* Button */}
-          <Button linkto="/our-leaderships">Know More</Button>
+          <Button linkto="/neeraj-kumar">Know More</Button>
         </motion.div>
 
         {/* CEO Image */}
