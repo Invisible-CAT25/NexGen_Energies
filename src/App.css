@@ -65,7 +65,8 @@ details > summary::-webkit-details-marker {
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  border: 9px solid #f1f2ff;
+  /* border: 9px solid #f1f2ff; */
+  border: 9px solid black;
   animation: spinner-bulqg1 0.8s infinite linear alternate, spinner-oaa3wk 1.6s infinite linear;
 }
 
@@ -235,11 +236,17 @@ details > summary::-webkit-details-marker {
 .blackButton {
   @apply cursor-pointer rounded-md bg-[#161D29] px-[20px] py-[8px] font-semibold text-[#F1F2FF];
 }
-.lable-style {
+/* .lable-style {
   @apply text-[14px] text-[#F1F2FF];
+} */
+.lable-style {
+  @apply text-[16px] text-black;
 }
-.form-style {
+/* .form-style {
   @apply rounded-lg bg-[#2C333F] p-3 text-[16px] leading-[24px] text-[#F1F2FF] shadow-[0_1px_0_0] shadow-white/50 placeholder:text-[#6E727F] focus:outline-none;
+} */
+.form-style {
+  @apply rounded-lg bg-[#F7F9FB] p-3 text-[14px] leading-[24px] text-black shadow-[0_1px_0_0] shadow-white/50 placeholder:text-[#6E727F] focus:outline-none;
 }
 .section_heading {
   @apply text-2xl font-bold text-[#F1F2FF] lg:text-4xl;

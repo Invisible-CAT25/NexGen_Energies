@@ -11,7 +11,7 @@ const footerLinks = [
 ];
 
 const offices = [
-  "Haryana", "Rajasthan", "Madhya Pradesh", "Maharashtra", "Bihar", "Jharkhand", "Chhattisgarh"
+  "Haryana", "Rajasthan", "Madhya Pradesh", "Maharashtra", "Bihar", "Odisha", "Jharkhand", "Chhattisgarh"
 ];
 
 const Footer = () => {

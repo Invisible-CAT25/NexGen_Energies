@@ -3,12 +3,11 @@ import { motion } from 'framer-motion';
 
 // Lazy load heavy sections
 const HeroSection = lazy(() => import('../components/core/HeroSection'))
-const ProjectsSection = lazy(() => import('../components/core/ProjectPage/ProjectsSection'));
 const Footer = lazy(() => import('../components/common/Footer'))
 
-const Service = () => {
+const Career = () => {
   useEffect(() => {
-    document.title = "Projects | NexGen Energies";
+    document.title = "Career | NexGen Energies";
     window.scrollTo(0, 0);
   }, []);
 
@@ -16,8 +15,7 @@ const Service = () => {
     <div className="snap-y snap-mandatory overflow-y-scroll scroll-smooth h-screen overflow-x-hidden">
       <Suspense fallback={<div className="min-h-screen flex items-center justify-center">Loading...</div>}>
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }} className="snap-start">
-          <HeroSection title="Projects" />
-          <ProjectsSection />
+          <HeroSection title="Career" />
           <Footer />
         </motion.div>
       </Suspense>
@@ -25,4 +23,4 @@ const Service = () => {
   );
 };
 
-export default Service;
+export default Career;

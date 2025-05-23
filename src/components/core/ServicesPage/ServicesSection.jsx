@@ -1,89 +1,60 @@
 import React from "react";
-import HighlightText from "../../common/HighlightText";
-import solarImage from "../../../assets/images/Home_Assets/solar_service.png";
-import transmissionImage from "../../../assets/images/Home_Assets/transmission_service.png";
-import ServiceBtn from "../HomePage/ServiceBtn";
-import Button from "../../common/Button";
 import { motion } from "framer-motion";
+import Icon1 from '../../../assets/images/Services/icon1.png'
+import Icon2 from '../../../assets/images/Services/icon2.png'
+import Icon3 from '../../../assets/images/Services/icon3.png'
+import Icon4 from '../../../assets/images/Services/icon4.png'
+import Icon5 from '../../../assets/images/Services/icon5.png'
 
-const ServicesSection = () => {
+const services = [
+  { id: 1, title: "End-to-End Solutions", icon: Icon1, link: "/services/end-to-end" },
+  { id: 2, title: "EPC Solutions", icon: Icon2, link: "/services/epc" },
+  { id: 3, title: "Rooftop Solutions", icon: Icon3, link: "/services/rooftop" },
+  { id: 4, title: "O & M Services", icon: Icon4, link: "/services/om" },
+  { id: 5, title: "Value Added Services", icon: Icon5, link: "/services/value-added" },
+];
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: (i) => ({
+    opacity: 1,
+    y: 0,
+    transition: { delay: i * 0.1 },
+  }),
+};
+
+const ServicesGrid = () => {
   return (
-    <section
-      className="w-11/12 max-w-7xl mx-auto flex flex-col items-center gap-12 mt-24"
-      role="region"
-      aria-label="Our services section"
-    >
-      {/* Renewable Energy Block */}
-      <motion.div
-        className="w-full h-[22rem] bg-cover bg-center sm:bg-[length:100%_100%] flex items-end justify-start text-white p-6 rounded-xl shadow-md overflow-hidden relative"
-        style={{ backgroundImage: `url(${solarImage})` }}
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        whileHover={{ scale: 1.03 }}
-        transition={{ duration: 0.7, delay: 0.1 }}
-        viewport={{ once: false }}
-        role="region"
-        aria-label="Renewable energy services"
-      >
-        <div className="z-10 flex flex-col justify-between h-full">
-          <h3
-            className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4"
-            style={{ textShadow: "0px 4px 4px rgba(80, 120, 185, 1)" }}
+    <section className="w-11/12 max-w-6xl mx-auto pt-16">
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
+        {services.map((service, i) => (
+          <motion.div
+            key={service.id}
+            custom={i}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false }}
+            variants={cardVariants}
+            whileHover={{ scale: 1.05 }}
+            className="cursor-pointer bg-white border border-gray-100 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 p-6 text-center flex flex-col items-center justify-center gap-4"
+            // onClick={() => window.location.href = service.link}
+            style={{ boxShadow: "0 4px 20px rgba(34, 197, 94, 0.3)" }}
           >
-            Renewable Energy
-          </h3>
+            <img
+                src={service.icon}
+                alt={service.title}
+                className="w-18 h-18 object-contain"
+                loading="lazy"
+            />
 
-          <div className="flex flex-col md:flex-row gap-4 md:items-center">
-            <ServiceBtn linkto="/services-we-offer">OPEX Model</ServiceBtn>
-            <ServiceBtn linkto="/services-we-offer">CAPEX Model</ServiceBtn>
-            <ServiceBtn linkto="/services-we-offer">Deferred CAPEX Model</ServiceBtn>
-          </div>
-        </div>
-
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-black/30 z-0 rounded-xl" aria-hidden="true" />
-      </motion.div>
-
-      {/* Power Transmission Block */}
-      <motion.div
-        className="w-full h-[22rem] bg-cover bg-center sm:bg-[length:100%_100%] flex items-end justify-end text-white p-6 rounded-xl shadow-md overflow-hidden relative"
-        style={{ backgroundImage: `url(${transmissionImage})` }}
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        whileHover={{ scale: 1.03 }}
-        transition={{ duration: 0.7, delay: 0.2 }}
-        viewport={{ once: false }}
-        role="region"
-        aria-label="Power transmission services"
-      >
-        <div className="z-10 flex flex-col items-end justify-between h-full">
-          <h3
-            className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-right"
-            style={{ textShadow: "0px 4px 4px rgba(80, 120, 185, 1)" }}
-          >
-            Power Transmission
-          </h3>
-
-          <ServiceBtn linkto="/services-we-offer">Power and Civil Services</ServiceBtn>
-        </div>
-
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-black/30 z-0 rounded-xl" aria-hidden="true" />
-      </motion.div>
-
-      {/* CTA Button */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.3 }}
-        viewport={{ once: false }}
-      >
-        <Button linkto="/services-we-offer" aria-label="View all services">
-          Know More
-        </Button>
-      </motion.div>
+            <h3 className="text-md font-semibold text-gray-800">
+              {service.title}
+            </h3>
+          </motion.div>
+        ))}
+      </div>
     </section>
   );
 };
 
-export default ServicesSection;
+export default ServicesGrid;

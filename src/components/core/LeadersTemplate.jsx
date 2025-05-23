@@ -1,7 +1,6 @@
 import React from 'react'
-// import image from '../../assets/images/NeerajKumar.png'
 
-const Template = ({image, name, designation}) => {
+const LeadersTemplate = ({image, name, designation}) => {
   return (
     <div className='w-11/12 h-full flex flex-col items-start justify-between mt-20 mx-auto gap-8'> 
         <div className='flex items-center'>
@@ -25,4 +24,4 @@ const Template = ({image, name, designation}) => {
   )
 }
 
-export default Template
+export default LeadersTemplate

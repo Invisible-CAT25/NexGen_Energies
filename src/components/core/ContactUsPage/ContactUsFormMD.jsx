@@ -2,7 +2,6 @@ import React from 'react';
 import { useForm, ValidationError } from '@formspree/react';
 import CountryCode from "../../../data/countrycode.json"
 
-
 function ContactUsFormMD() {
   const [state, handleSubmit] = useForm("myzwokyz");
   if (state.succeeded) {
@@ -74,25 +73,7 @@ function ContactUsFormMD() {
           Phone Number
         </label>
 
-        <div className="flex gap-5">
-          <div className="flex w-[81px] flex-col gap-2">
-            <select
-              type="text"
-              name="firstname"
-              id="firstname"
-              placeholder="Enter first name"
-              className="form-style"
-            >
-              {CountryCode.map((ele, i) => {
-                return (
-                  <option key={i} value={ele.code}>
-                    {ele.code}
-                  </option>
-                )
-              })}
-            </select>
-          </div>
-          <div className="flex w-[calc(100%-90px)] flex-col gap-2">
+        <div className="flex w-[calc(100%-90px)] flex-col gap-2">
             <input
               type="tel"
               name="phonenumber"
@@ -105,9 +86,7 @@ function ContactUsFormMD() {
                 field="phonenumber"
                 errors={state.errors}
             />
-          </div>
-        </div>
-        
+        </div> 
       </div>
 
       <div className="flex flex-col gap-2">
@@ -133,7 +112,7 @@ function ContactUsFormMD() {
       <button
         disabled={state.submitting}
         type="submit"
-        className={`rounded-md bg-yellow-50 px-6 py-3 text-center text-[13px] font-bold text-black shadow-[2px_2px_0px_0px_rgba(255,255,255,0.18)] 
+        className={`rounded-md bg-richgreen px-6 py-3 text-center text-[13px] font-bold text-white shadow-[2px_2px_0px_0px_rgba(255,255,255,0.18)] 
          ${
            !state.submitting &&
            "transition-all duration-200 hover:scale-95 hover:shadow-none"

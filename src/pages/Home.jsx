@@ -1,4 +1,4 @@
-import React, { useEffect, lazy, Suspense } from 'react';
+import React, { useEffect, lazy, Suspense, useLayoutEffect } from 'react';
 import { motion } from 'framer-motion';
 import smoothscroll from 'smoothscroll-polyfill';
 
@@ -16,8 +16,8 @@ const FAQSection = lazy(() => import('../components/core/HomePage/FAQSection'));
 const Footer = lazy(() => import('../components/common/Footer'));
 
 const Home = () => {
-  useEffect(() => {
-    document.title = 'NexGen Energies';
+  useLayoutEffect(() => {
+    document.title = 'NexGen Energies | Sustainable Solar Power Solutions';
     window.scrollTo(0, 0);
     smoothscroll.polyfill();
   }, []);
@@ -30,49 +30,19 @@ const Home = () => {
   return (
     <main className="snap-y snap-mandatory h-screen overflow-y-scroll scroll-smooth overflow-x-hidden">
       <Suspense fallback={<div className="min-h-screen flex items-center justify-center">Loading...</div>}>
-        <section className="snap-start">
+        <motion.div className="snap-start" variants={sectionVariants} viewport={{ once: true }}>
           <HeroSection />
-        </section>
-
-        <motion.section className="snap-start" variants={sectionVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           <AboutSection />
-        </motion.section>
-
-        <motion.section className="snap-start" variants={sectionVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           <ServicesSection />
-        </motion.section>
-
-        <motion.section className="snap-start" variants={sectionVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           <WhyChooseUs />
-        </motion.section>
-
-        <motion.section className="snap-start" variants={sectionVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           <GoSolar />
-        </motion.section>
-
-        <motion.section className="snap-start" variants={sectionVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           <CEOSection />
-        </motion.section>
-
-        <motion.section className="snap-start" variants={sectionVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           <OurValues />
-        </motion.section>
-
-        <motion.section className="snap-start" variants={sectionVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           <LatestNews />
-        </motion.section>
-
-        <motion.section className="snap-start" variants={sectionVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           <ClientSlider />
-        </motion.section>
-
-        <motion.section className="snap-start" variants={sectionVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           <FAQSection />
-        </motion.section>
-
-        <section className="snap-start">
           <Footer />
-        </section>
+        </motion.div>
       </Suspense>
     </main>
   );
