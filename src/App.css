@@ -22,6 +22,7 @@
 html,
 body {
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 /* ===== Scrollbar CSS ===== */
@@ -246,7 +247,7 @@ details > summary::-webkit-details-marker {
   @apply rounded-lg bg-[#2C333F] p-3 text-[16px] leading-[24px] text-[#F1F2FF] shadow-[0_1px_0_0] shadow-white/50 placeholder:text-[#6E727F] focus:outline-none;
 } */
 .form-style {
-  @apply rounded-lg bg-[#F7F9FB] p-3 text-[14px] leading-[24px] text-black shadow-[0_1px_0_0] shadow-white/50 placeholder:text-[#6E727F] focus:outline-none;
+  @apply rounded-lg bg-black/10 p-3 text-[14px] leading-[24px] text-black shadow-[0_1px_0_0] shadow-white/50 placeholder:text-[#6E727F] focus:outline-none;
 }
 .section_heading {
   @apply text-2xl font-bold text-[#F1F2FF] lg:text-4xl;

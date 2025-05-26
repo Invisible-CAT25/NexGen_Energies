@@ -1,5 +1,6 @@
 import React, { useEffect, Suspense, lazy } from 'react';
 import { motion } from 'framer-motion';
+import SectionTemplate from '../components/core/SectionTemplate';
 
 // Lazy load heavy sections
 const HeroSection = lazy(() => import('../components/core/HeroSection'))
@@ -16,6 +17,8 @@ const Career = () => {
       <Suspense fallback={<div className="min-h-screen flex items-center justify-center">Loading...</div>}>
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }} className="snap-start">
           <HeroSection title="Career" />
+          <SectionTemplate name={"Hello"} />
+          <SectionTemplate active={true} name={"Hello"}  />
           <Footer />
         </motion.div>
       </Suspense>

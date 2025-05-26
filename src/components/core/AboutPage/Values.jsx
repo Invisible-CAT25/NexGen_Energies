@@ -85,7 +85,7 @@ const Values = () => {
         </motion.div>
 
         {/* Values List */}
-        <div className="flex-1 grid gap-8">
+        <div className="grid gap-8">
           {values.map((value, index) => (
             <motion.div
               key={index}
