@@ -2,16 +2,17 @@ import React from "react";
 import { motion } from "framer-motion";
 import HighlightText from "../../common/HighlightText";
 import bgImage from "../../../assets/images/Home_Assets/choose_us_bg.png";
-import leader from "../../../assets/images/About_Assets/leader.png";
+import leader1 from "../../../assets/images/About_Assets/leader1.png";
 import leader2 from "../../../assets/images/About_Assets/leader2.png";
 import leader3 from "../../../assets/images/About_Assets/leader3.png";
 import leader4 from "../../../assets/images/About_Assets/leader4.png";
+import leader5 from "../../../assets/images/About_Assets/leader5.png";
 import icon from "../../../assets/images/About_Assets/join_icon.png";
 import { Link } from "react-router-dom";
 
-const features = [
+const leaders = [
   {
-    image: leader,
+    image: leader1,
     name: "Neeraj Kumar",
     role: "CEO",
     link: "/neeraj-kumar",
@@ -35,7 +36,7 @@ const features = [
     link: "/ravi-gupta",
   },
   {
-    image: leader,
+    image: leader5,
     name: "Hemraj Katariya",
     role: "CTO",
     link: "/hemraj-katariya",
@@ -67,7 +68,7 @@ const Leaders = () => {
         viewport={{ once: false }}
         transition={{ staggerChildren: 0.2 }}
       >
-        {features.map((leader, index) => (
+        {leaders.map((leader, index) => (
           <motion.div
             key={index}
             className="bg-white rounded-xl shadow-lg p-6 text-center hover:shadow-2xl transition duration-300"
@@ -108,7 +109,7 @@ const Leaders = () => {
             <Link
               to="/careers"
               className="flex flex-col items-center gap-6 justify-center w-full h-full"
-              aria-label={`Go to ${leader.name}'s profile`}
+              aria-label={`Go to Join Our Team Page`}
             >
                 <img src={icon} alt="Join Our Team" className="w-30 h-20" loading="lazy" />
                 <h3 className="text-3xl font-bold text-white">Join Our Team</h3>

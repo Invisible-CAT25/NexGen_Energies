@@ -1,14 +1,14 @@
 import React from 'react'
 
-const LeadersTemplate = ({image, name, designation}) => {
+const LeadersTemplate = ({image, name, designation, property}) => {
   return (
     <div className='w-11/12 h-full flex flex-col items-start justify-between mt-20 mx-auto gap-8'> 
         <div className='flex items-center'>
             <div className='bg-gray-300 relative'>
-                <img src={image} alt='Neeraj Kumar'></img>
+                <img src={image} alt={name}></img>
 
-                <div className='hidden lg:block'>
-                    <div className='flex flex-col bg-gradient-to-b from-[#5078B9] to-[#4BBB93] gap-3 py-10 rounded-lg px-8 absolute top-30 -right-75'>
+                <div className='hidden md:block'>
+                    <div className={`flex flex-col bg-gradient-to-b from-[#5078B9] to-[#4BBB93] gap-3 py-10 rounded-lg px-8 absolute top-30 ${property}`}>
                         <p className='font-semibold text-4xl text-white'>{name}</p>
                         <p className='text-white text-2xl'>{designation}</p>
                     </div>

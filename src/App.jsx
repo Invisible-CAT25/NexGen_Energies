@@ -17,10 +17,11 @@ import { useEffect } from "react";
 import Service from './pages/Service'
 import FinancialSolution from './pages/FinancialSolution'
 
-import image1 from './assets/images/About_Assets/NeerajKumar.png'
+import image1 from './assets/images/About_Assets/leader1.png'
 import image2 from './assets/images/About_Assets/leader2.png'
 import image3 from './assets/images/About_Assets/leader3.png'
 import image4 from './assets/images/About_Assets/leader4.png'
+import image5 from './assets/images/About_Assets/leader5.png'
 import LeadersTemplate from './components/core/LeadersTemplate'
 import Career from './pages/Career'
 
@@ -45,11 +46,11 @@ function App() {
         <Route path='/contact-us' element={<Contact />} />
 
 
-        <Route path='/neeraj-kumar' element={<LeadersTemplate image={image1} name={"NEERAJ KUMAR"} designation={"-CEO"} />} />
-        <Route path='/vikas-mishra' element={<LeadersTemplate image={image2} name={"VIKAS MISHRA"} designation={"-CFO"} />} />
-        <Route path='/ashish-gupta' element={<LeadersTemplate image={image3} name={"ASHISH GUPTA"} designation={"-Director Projects"} />} />
-        <Route path='/ravi-gupta' element={<LeadersTemplate image={image4} name={"RAVI GUPTA"} designation={"-Business Head"} />} />
-        <Route path='/hemraj-katariya' element={<LeadersTemplate image={image1} name={"HEMRAJ KATARIYA"} designation={"-CTO"} />} />
+        <Route path='/neeraj-kumar' element={<LeadersTemplate image={image1} name={"NEERAJ KUMAR"} designation={"-CEO"} property={"-right-75"} />} />
+        <Route path='/vikas-mishra' element={<LeadersTemplate image={image2} name={"VIKAS MISHRA"} designation={"-CFO"} property={"-right-70"}  />} />
+        <Route path='/ashish-gupta' element={<LeadersTemplate image={image3} name={"ASHISH GUPTA"} designation={"-Director Projects"} property={"-right-72"} />} />
+        <Route path='/ravi-gupta' element={<LeadersTemplate image={image4} name={"RAVI GUPTA"} designation={"-Business Head"} property={"-right-62"} />} />
+        <Route path='/hemraj-katariya' element={<LeadersTemplate image={image5} name={"HEMRAJ KATARIYA"} designation={"-CTO"} property={"-right-90"}  />} />
 
       </Routes>
     </div>
