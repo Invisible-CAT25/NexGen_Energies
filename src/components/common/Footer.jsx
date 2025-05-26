@@ -75,7 +75,7 @@ const Footer = () => {
                 <FaEnvelope className="text-2xl" />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/company/nexgen-energies/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
