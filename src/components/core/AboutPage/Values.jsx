@@ -59,58 +59,60 @@ const Values = () => {
   return (
     <section
       id="val"
-      className="w-11/12 mx-auto mt-20 flex flex-col items-center"
+      className="w-full mt-20 flex flex-col items-center"
       aria-labelledby="our-values-heading"
     >
-      <h2
+      <div className="w-11/12 max-w-7xl mx-auto">
+        <h2
         id="our-values-heading"
         className="text-3xl md:text-[2.5rem] font-bold text-center mb-8"
       >
         <HighlightText text="Our Values" />
-      </h2>
+        </h2>
 
-      <div className="flex flex-col md:flex-row justify-center gap-12">
-        {/* Vertical Label */}
-        <motion.div
-          className="min-w-[300px] bg-gradient-to-b from-[#5078B9] to-[#4BBB93] text-white font-semibold text-8xl px-6 py-12 rounded-2xl text-center hidden md:flex flex-col items-center gap-8"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false }}
-          transition={{ duration: 0.6 }}
-          aria-hidden="true"
-        >
-          {"ETHICAL".split("").map((letter, index) => (
-            <span key={index}>{letter}</span>
-          ))}
-        </motion.div>
+        <div className="flex flex-col md:flex-row  gap-12 ">
+          {/* Vertical Label */}
+          <motion.div
+            className="w-[300px] bg-gradient-to-b from-[#5078B9] to-[#4BBB93] text-white font-semibold text-8xl px-6 py-12 rounded-2xl text-center hidden md:flex flex-col items-center gap-8 justify-between"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false }}
+            transition={{ duration: 0.6 }}
+            aria-hidden="true"
+          >
+            {"ETHICAL".split("").map((letter, index) => (
+              <span key={index}>{letter}</span>
+            ))}
+          </motion.div>
 
-        {/* Values List */}
-        <div className="grid gap-8">
-          {values.map((value, index) => (
-            <motion.div
-              key={index}
-              className="flex items-center gap-8 justify-center"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: false }}
-              transition={{ duration: 0.4, delay: index * 0.1 }}
-            >
-              <div className="w-[50px] h-[50px] flex-shrink-0">
-                <img
-                  src={value.icon}
-                  alt={`${value.title} icon`}
-                  className="w-full h-full object-contain"
-                  loading="lazy"
-                />
-              </div>
-              <div className="flex flex-col gap-2">
-                <h3 className="text-xl font-semibold">{value.title}</h3>
-                <p className="text-gray-600 text-base">{value.description}</p>
-              </div>
-            </motion.div>
-          ))}
+          {/* Values List */}
+          <div className="flex-1 grid gap-8">
+            {values.map((value, index) => (
+              <motion.div
+                key={index}
+                className="flex items-center gap-8 justify-center"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: false }}
+                transition={{ duration: 0.4, delay: index * 0.1 }}
+              >
+                <div className="w-[50px] h-[50px] flex-shrink-0">
+                  <img
+                    src={value.icon}
+                    alt={`${value.title} icon`}
+                    className="w-full h-full object-contain"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="flex flex-col gap-2">
+                  <h3 className="text-xl font-semibold">{value.title}</h3>
+                  <p className="text-gray-600 text-base">{value.description}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
-      </div>
+      </div>  
     </section>
   );
 };
