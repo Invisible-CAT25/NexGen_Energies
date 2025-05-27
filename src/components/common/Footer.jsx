@@ -11,7 +11,7 @@ const footerLinks = [
 ];
 
 const offices = [
-  "Haryana", "Rajasthan", "Madhya Pradesh", "Maharashtra", "Bihar", "Odisha", "Jharkhand", "Chhattisgarh"
+  "Haryana", "Rajasthan", "Madhya Pradesh", "Maharashtra", "Odisha", "Jharkhand", "Chhattisgarh"
 ];
 
 const Footer = () => {
@@ -71,7 +71,7 @@ const Footer = () => {
           <div>
             <h3 className="font-bold text-lg mb-3">Get In Touch</h3>
             <div className="flex items-center gap-4 mt-2">
-              <a href="mailto:info@nexgen.com" aria-label="Email" className="text-gray-600 hover:text-green-600 transition">
+              <a href="mailto:info@nexgenenergies.co.in" aria-label="Email" className="text-gray-600 hover:text-richgreen transition">
                 <FaEnvelope className="text-2xl" />
               </a>
               <a
@@ -79,7 +79,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
-                className="text-gray-600 hover:text-blue-700 transition"
+                className="text-gray-600 hover:text-richblue transition"
               >
                 <FaLinkedin className="text-2xl" />
               </a>

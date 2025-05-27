@@ -8,7 +8,7 @@ const ContactForm = () => {
       <h1 className="text-4xl leading-10 font-semibold text-black">
         Got a Idea? We&apos;ve got the skills. Let&apos;s team up
       </h1>
-      <p className="">
+      <p>
         Tell us more about yourself and what you&apos;re got in mind.
       </p>
 

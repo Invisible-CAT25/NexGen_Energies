@@ -1,29 +1,28 @@
 import './App.css'
+import { useEffect } from "react";
 import { Route, Routes } from 'react-router-dom'
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 // component
 import Navbar from './components/common/Navbar'
 import ScrollToTop from './components/common/ScrollToTop'
+import LeadersTemplate from './components/core/LeadersTemplate'
 
 // pages
 import Home from './pages/Home'
 import About from './pages/About'
-import Contact from './pages/Contact'
-import Projects from './pages/Projects'
-
-import AOS from "aos";
-import "aos/dist/aos.css";
-import { useEffect } from "react";
 import Service from './pages/Service'
 import FinancialSolution from './pages/FinancialSolution'
+import Projects from './pages/Projects'
+import Career from './pages/Career'
+import Contact from './pages/Contact'
 
 import image1 from './assets/images/About_Assets/leader1.png'
 import image2 from './assets/images/About_Assets/leader2.png'
 import image3 from './assets/images/About_Assets/leader3.png'
 import image4 from './assets/images/About_Assets/leader4.png'
 import image5 from './assets/images/About_Assets/leader5.png'
-import LeadersTemplate from './components/core/LeadersTemplate'
-import Career from './pages/Career'
 
 function App() {
 

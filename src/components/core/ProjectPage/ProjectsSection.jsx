@@ -9,7 +9,7 @@ const allProjects = [
     id: 1,
     title: "1.5 MW",
     location: "Modipuram, Meerut",
-    category: "IPP",
+    category: "EPC",
     image: continental,
   },
   {
@@ -86,7 +86,7 @@ export default function ProjectsSection() {
     <section className="w-full px-6 pt-20" id="projects">
       <div className="w-11/12 max-w-7xl mx-auto">
         {/* Filters */}
-        <div className="flex flex-wrap justify-center gap-4 sm:gap-10 mb-10">
+        <div className="flex flex-wrap justify-center gap-4 md:gap-8 mb-10">
           {filters.map((filter) => (
             <motion.button
               key={filter}
@@ -94,13 +94,14 @@ export default function ProjectsSection() {
                 setActiveFilter(filter);
                 setVisibleCount(6);
               }}
-              className={`px-4 py-2 rounded-md border transition duration-300 ${
+              className={`px-4 sm:px-10 py-2 border transition duration-300 hover:scale-105 text-richgreen  border-richgreen ${
                 activeFilter === filter
-                  ? "bg-green-100 text-green-800 border-richgreen shadow-md"
-                  : "bg-white text-gray-600 border-gray-300 hover:bg-gray-100"
+                  ? "bg-gradient-to-r from-richblue to-richgreen text-transparent bg-clip-text font-semibold transition-all duration-200"
+                  : ""
               }`}
               whileTap={{ scale: 0.95 }}
               viewport={{ once: false }}
+              style={{ boxShadow: "2 2px 10px rgba(34, 197, 94, 0.3)" }}
             >
               {filter}
             </motion.button>
@@ -109,15 +110,10 @@ export default function ProjectsSection() {
 
         {/* Project Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <AnimatePresence>
             {visibleProjects.map((project) => (
-              <motion.div
+              <div
                 key={project.id}
                 layout
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -30 }}
-                viewport={{ once: false }}
                 className="relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition cursor-pointer"
                 onClick={() => setSelectedProject(project)}
               >
@@ -130,9 +126,8 @@ export default function ProjectsSection() {
                   <h3 className="text-xl font-semibold">{project.title}</h3>
                   <p className="text-sm">{project.location}</p>
                 </div>
-              </motion.div>
+              </div>
             ))}
-          </AnimatePresence>
         </div>
 
         {/* Load More Button */}
@@ -141,7 +136,7 @@ export default function ProjectsSection() {
             <motion.button
               onClick={loadMore}
               whileTap={{ scale: 0.95 }}
-              className="px-6 py-2 bg-richgreen text-white rounded-full hover:bg-green-700 transition shadow"
+              className="px-6 py-2 bg-richgreen text-white rounded-full hover:bg-richblue transition-all duration-200 shadow"
             >
               Load More
             </motion.button>
@@ -159,7 +154,7 @@ export default function ProjectsSection() {
               onClick={() => setSelectedProject(null)}
             >
               <motion.div
-                className="bg-white rounded-xl shadow-xl max-w-lg w-full p-6 relative"
+                className="bg-white rounded-xl shadow-xl max-w-lg w-11/12 p-6 relative"
                 initial={{ y: 100, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 exit={{ y: 100, opacity: 0 }}
@@ -167,7 +162,7 @@ export default function ProjectsSection() {
               >
                 <button
                   onClick={() => setSelectedProject(null)}
-                  className="absolute top-3 right-3 text-gray-500 hover:text-gray-700 text-xl"
+                  className="absolute top-0 right-1 text-gray-500 hover:text-gray-700 text-3xl"
                 >
                   &times;
                 </button>

@@ -58,7 +58,6 @@ const values = [
 const Values = () => {
   return (
     <section
-      id="val"
       className="w-full mt-20 flex flex-col items-center"
       aria-labelledby="our-values-heading"
     >
@@ -79,6 +78,7 @@ const Values = () => {
             viewport={{ once: false }}
             transition={{ duration: 0.6 }}
             aria-hidden="true"
+            id="value-banner"
           >
             {"ETHICAL".split("").map((letter, index) => (
               <span key={index}>{letter}</span>
