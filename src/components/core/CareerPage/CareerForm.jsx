@@ -104,7 +104,7 @@ export default function JobApplicationForm() {
                   <div key={idx} className={field.name === "address" || field.name === "gender" ? "md:col-span-2" : ""}>
                     <label className="block text-black">{field.label}</label>
                     {field.type === "select" ? (
-                      <select {...register(field.name, { required: true })} className="w-full p-3 mt-1 rounded-lg border bg-black/10 text-sm placeholder:text-[#6E727F] text-black">
+                      <select {...register(field.name, { required: true })} className="w-full p-3 mt-1 rounded-lg bg-black/10 text-sm placeholder:text-[#6E727F] text-black">
                         {field.options.map((opt, i) => 
                           <option key={i} value={opt}>{opt || "Select"}</option>
                         )}
@@ -114,7 +114,7 @@ export default function JobApplicationForm() {
                         type={field.type}
                         {...register(field.name, { required: true })}
                         placeholder={`Enter ${field.label.toLowerCase()}`}
-                        className="w-full p-3 mt-1 rounded-lg border bg-black/10 text-sm text-black placeholder:text-[#6E727F]"
+                        className="w-full p-3 mt-1 rounded-lg bg-black/10 text-sm text-black placeholder:text-[#6E727F]"
                       />
                     )}
                     {errors[field.name] && <span className="text-red-500 text-sm">This field is required</span>}
@@ -127,15 +127,21 @@ export default function JobApplicationForm() {
           {step === 1 && (
             <motion.div key="step2" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {["Job Role", "Notice Period", "Current CTC", "Expected CTC"].map((field, idx) => (
+                {[
+                  { name: "jobRole", label: "Job Role", type: "text" },
+                  { name: "noticePeriod", label: "Notice Period", type: "tel" },
+                  { name: "currentCTC", label: "Current CTC", type: "tel" },
+                  { name: "expectedCTC", label: "Expected CTC", type: "tel" }
+                  ].map((field, idx) => (
                   <div key={idx}>
-                    <label className="block text-black">{field}</label>
+                    <label className="block text-black">{field.label}</label>
                     <input
-                      {...register(field, { required: true })}
-                      placeholder={`Enter ${field}`}
-                      className="w-full p-3 mt-1 rounded-lg border bg-black/10 text-sm text-black placeholder:text-[#6E727F]"
+                      type={field.type}
+                      {...register(field.name, { required: true })}
+                      placeholder={`Enter ${field.label}`}
+                      className="w-full p-3 mt-1 rounded-lg bg-black/10 text-sm text-black placeholder:text-[#6E727F]"
                     />
-                    {errors[field] && <span className="text-red-500 text-sm">This field is required</span>}
+                    {errors[field.label] && <span className="text-red-500 text-sm">This field is required</span>}
                   </div>
                 ))}
 
@@ -148,7 +154,7 @@ export default function JobApplicationForm() {
                           key={attr}
                           {...register(`education.${index}.${attr}`, { required: true })}
                           placeholder={attr.charAt(0).toUpperCase() + attr.slice(1)}
-                          className="p-3 rounded-lg border bg-black/10 text-sm text-black placeholder:text-[#6E727F]"
+                          className="p-3 rounded-lg bg-black/10 text-sm text-black placeholder:text-[#6E727F]"
                         />
                       ))}
                       <button type="button" onClick={() => removeEdu(index)} className="absolute top-2 right-2 text-red-500 text-xl font-bold">&times;</button>
@@ -166,7 +172,7 @@ export default function JobApplicationForm() {
                           key={attr}
                           {...register(`employment.${index}.${attr}`, { required: true })}
                           placeholder={attr.charAt(0).toUpperCase() + attr.slice(1)}
-                          className="p-3 rounded-lg border bg-black/10 text-sm text-black placeholder:text-[#6E727F]"
+                          className="p-3 rounded-lg bg-black/10 text-sm text-black placeholder:text-[#6E727F]"
                         />
                       ))}
                       <button type="button" onClick={() => removeEmp(index)} className="absolute top-2 right-2 text-red-500 text-xl font-bold">&times;</button>
@@ -200,9 +206,9 @@ export default function JobApplicationForm() {
                         })}
                         className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
                       />
-                      <div className="w-full p-3 mt-1 rounded-lg border bg-black/10 text-sm text-black flex items-center justify-between pointer-events-none">
+                      <div className="w-full p-3 mt-1 rounded-lg bg-black/10 text-sm text-black flex items-center justify-between pointer-events-none">
                         <span className={fileName === "Choose resume file (PDF, DOC, DOCX)" ? "text-[#6E727F]" : "text-black font-medium"}>
-                          {fileName}
+                          {fileName}  
                         </span>
                         <span className="text-black font-medium">Browse</span>
                       </div>
@@ -213,11 +219,11 @@ export default function JobApplicationForm() {
                 </div>
                 <div>
                   <label className="block text-black">LinkedIn Profile</label>
-                  <input {...register("linkedin")} placeholder="https://linkedin.com/in/..." className="w-full p-3 mt-1 rounded-lg border bg-black/10 text-sm text-black placeholder:text-[#6E727F]" />
+                  <input {...register("linkedin")} placeholder="https://linkedin.com/in/..." className="w-full p-3 mt-1 rounded-lg bg-black/10 text-sm text-black placeholder:text-[#6E727F]" />
                 </div>
                 <div>
                   <label className="block text-black">Portfolio URL</label>
-                  <input {...register("portfolio")} placeholder="https://yourportfolio.com" className="w-full p-3 mt-1 rounded-lg border bg-black/10 text-sm text-black placeholder:text-[#6E727F]" />
+                  <input {...register("portfolio")} placeholder="https://yourportfolio.com" className="w-full p-3 mt-1 rounded-lg bg-black/10 text-sm text-black placeholder:text-[#6E727F]" />
                 </div>
                 <div>
                   <label className="block text-black">Additional Notes</label>

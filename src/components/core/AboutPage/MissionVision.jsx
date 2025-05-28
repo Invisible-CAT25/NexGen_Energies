@@ -1,8 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Icon1 from "../../../assets/images/Home_Assets/subLogo1.png";
-import Icon2 from "../../../assets/images/Home_Assets/subLogo2.png";
-import Icon3 from "../../../assets/images/Home_Assets/subLogo3.png";
+import Icon1 from "../../../assets/images/Home_Assets/subLogo1.svg";
+import Icon2 from "../../../assets/images/Home_Assets/subLogo2.svg";
+import Icon3 from "../../../assets/images/Home_Assets/subLogo3.svg";
 
 const features = [
   {

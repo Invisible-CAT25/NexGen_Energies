@@ -1,10 +1,10 @@
 import React from "react";
 import HighlightText from "../../common/HighlightText";
 import solarImage from "../../../assets/images/Home_Assets/go_solar.png";
-import Logo1 from "../../../assets/images/Home_Assets/go_solar_logo1.png";
-import Logo2 from "../../../assets/images/Home_Assets/go_solar_logo_2.png";
-import Logo3 from "../../../assets/images/Home_Assets/go_solar_logo3.png";
-import Logo4 from "../../../assets/images/Home_Assets/go_solar_logo4.png";
+import Logo1 from "../../../assets/images/Home_Assets/go_solar_logo1.svg";
+import Logo2 from "../../../assets/images/Home_Assets/go_solar_logo2.svg";
+import Logo3 from "../../../assets/images/Home_Assets/go_solar_logo3.svg";
+import Logo4 from "../../../assets/images/Home_Assets/go_solar_logo4.svg";
 import { motion } from "framer-motion";
 
 const timeline = [

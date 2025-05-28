@@ -3,11 +3,11 @@ import HighlightText from "../common/HighlightText";
 import continental from "../../assets/images/project.png";
 import { motion } from "framer-motion";
 
-const SectionTemplate = ({ active = false, name }) => {
+const SectionTemplate = ({ active = false, name, description }) => {
   return (
     <section className="w-11/12 mx-auto mt-20">
       <div
-        className={`flex flex-col lg:flex-row items-center gap-8 ${
+        className={`flex flex-col lg:flex-row items-center justify-center gap-8 ${
           active ? "lg:flex-row-reverse" : ""
         }`}
       >
@@ -39,8 +39,10 @@ const SectionTemplate = ({ active = false, name }) => {
             <HighlightText text={name} />
           </h2>
 
-          <p className="text-[17px] text-[#6C6969] leading-relaxed">
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.  Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
+          <p className="text-sm text-[#6C6969] leading-relaxed">
+            {
+              description ? description : "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.  Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu."
+            }
           </p>
         </motion.div>
       </div>

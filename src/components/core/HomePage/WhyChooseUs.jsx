@@ -1,12 +1,12 @@
   import React from "react";
   import HighlightText from "../../common/HighlightText";
   import bgImage from "../../../assets/images/Home_Assets/choose_us_bg.png";
-  import Icon1 from "../../../assets/images/Home_Assets/subLogo1.png";
-  import Icon2 from "../../../assets/images/Home_Assets/subLogo2.png";
-  import Icon3 from "../../../assets/images/Home_Assets/subLogo3.png";
-  import Icon4 from "../../../assets/images/Home_Assets/subLogo4.png";
-  import Icon5 from "../../../assets/images/Home_Assets/subLogo5.png";
-  import Icon6 from "../../../assets/images/Home_Assets/subLogo6.png";
+  import Icon1 from "../../../assets/images/Home_Assets/subLogo1.svg";
+  import Icon2 from "../../../assets/images/Home_Assets/subLogo2.svg";
+  import Icon3 from "../../../assets/images/Home_Assets/subLogo3.svg";
+  import Icon4 from "../../../assets/images/Home_Assets/subLogo4.svg";
+  import Icon5 from "../../../assets/images/Home_Assets/subLogo5.svg";
+  import Icon6 from "../../../assets/images/Home_Assets/subLogo6.svg";
   import { motion } from "framer-motion";
 
   const features = [
@@ -69,7 +69,7 @@
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                className="bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-2xl transition duration-300 flex flex-col justify-center items-center gap-5"
+                className="bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-2xl transition duration-300 flex flex-col justify-between items-center gap-5"
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -80,10 +80,10 @@
                 <img
                   src={feature.icon}
                   alt={feature.title}
-                  className="w-16 h-16 object-contain"
+                  className="w-24 h-24 object-contain"
                   loading="lazy"
                 />
-                <h3 className="text-xl font-semibold">{feature.title}</h3>
+                <h3 className="text-xl font-semibold w-[70%]">{feature.title}</h3>
                 <p className="text-gray-600 text-base">{feature.description}</p>
               </motion.div>
             ))}

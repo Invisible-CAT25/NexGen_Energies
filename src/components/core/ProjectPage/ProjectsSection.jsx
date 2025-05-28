@@ -2,65 +2,37 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import continental from '../../../assets/images/project.png'
 
-const filters = ["All", "End-to-End", "EPC", "IPP", "Rooftop"];
+const filters = ["All", "EPC", "C & I", "Rooftop", "Ground Mount"];
 
 const allProjects = [
   {
     id: 1,
     title: "1.5 MW",
-    location: "Modipuram, Meerut",
-    category: "EPC",
+    location: "Continental, Modipuram, Meerut",
+    category: ["EPC", "Rooftop", "C & I"],
     image: continental,
   },
   {
     id: 2,
-    title: "1.5 MW",
-    location: "Modipuram, Meerut",
-    category: "Rooftop",
+    title: "1 MW",
+    location: "Luminous, Schneider, Kolkata",
+    category: ["Rooftop", "C & I"],
     image: continental,
   },
   {
     id: 3,
-    title: "5 MW",
-    location: "Dehradun, Uttarakhand",
-    category: "End-to-End",
+    title: "1 MW",
+    location: "Luminous, Schneider, Hyderabad",
+    category: ["Rooftop", "C & I"],
     image: continental,
   },
   {
     id: 4,
-    title: "1.5 MW",
-    location: "Modipuram, Meerut",
-    category: "IPP",
+    title: "71 MW",
+    location: "RRECL, Rajasthan",
+    category: ["Rooftop"],
     image: continental,
-  },
-  {
-    id: 5,
-    title: "1.5 MW",
-    location: "Modipuram, Meerut",
-    category: "Rooftop",
-    image: continental,
-  },
-  {
-    id: 6,
-    title: "5 MW",
-    location: "Dehradun, Uttarakhand",
-    category: "End-to-End",
-    image: continental,
-  },
-  {
-    id: 7,
-    title: "1.5 MW",
-    location: "Modipuram, Meerut",
-    category: "Rooftop",
-    image: continental,
-  },
-  {
-    id: 8,
-    title: "5 MW",
-    location: "Dehradun, Uttarakhand",
-    category: "End-to-End",
-    image: continental,
-  },
+  }
   // Add more projects...
 ];
 
@@ -74,7 +46,7 @@ export default function ProjectsSection() {
   const filteredProjects =
     activeFilter === "All"
       ? allProjects
-      : allProjects.filter((p) => p.category === activeFilter);
+      : allProjects.filter((p) => p.category.includes(activeFilter));
 
   const visibleProjects = filteredProjects.slice(0, visibleCount);
 
@@ -94,14 +66,14 @@ export default function ProjectsSection() {
                 setActiveFilter(filter);
                 setVisibleCount(6);
               }}
-              className={`px-4 sm:px-10 py-2 border transition duration-300 hover:scale-105 text-richgreen  border-richgreen ${
+              className={`px-4 sm:px-10 py-2 transition duration-300 hover:scale-105 text-richgreen  border-richgreen ${
                 activeFilter === filter
                   ? "bg-gradient-to-r from-richblue to-richgreen text-transparent bg-clip-text font-semibold transition-all duration-200"
                   : ""
               }`}
               whileTap={{ scale: 0.95 }}
               viewport={{ once: false }}
-              style={{ boxShadow: "2 2px 10px rgba(34, 197, 94, 0.3)" }}
+              style={{ boxShadow: "0 4px 10px rgba(34, 197, 94, 0.3)" }}
             >
               {filter}
             </motion.button>
@@ -110,23 +82,28 @@ export default function ProjectsSection() {
 
         {/* Project Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {visibleProjects.map((project) => (
-              <div
-                key={project.id}
-                layout
-                className="relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition cursor-pointer"
-                onClick={() => setSelectedProject(project)}
-              >
-                <img
-                  src={project.image}
-                  alt={`${project.title} - ${project.location}`}
-                  className="w-full h-60 object-cover"
-                />
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 text-white">
-                  <h3 className="text-xl font-semibold">{project.title}</h3>
-                  <p className="text-sm">{project.location}</p>
-                </div>
-              </div>
+            {visibleProjects.length === 0 
+            ? <span className="col-span-1 sm:col-span-2 lg:col-span-3 text-center">No Result Found</span> 
+            : visibleProjects.map((project, index) => (
+                <motion.div
+                  key={project.id}
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: false }}
+                  className="relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition cursor-pointer"
+                  onClick={() => setSelectedProject(project)}
+                >
+                  <img
+                    src={project.image}
+                    alt={`${project.title} - ${project.location}`}
+                    className="w-full h-60 object-cover"
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 text-white">
+                    <h3 className="text-xl font-semibold">{project.title}</h3>
+                    <p className="text-sm">{project.location}</p>
+                  </div>
+                </motion.div>
             ))}
         </div>
 
