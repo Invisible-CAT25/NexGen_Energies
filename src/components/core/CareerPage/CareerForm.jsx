@@ -1,7 +1,10 @@
 import { useState } from "react";
 import { useForm, useFieldArray } from "react-hook-form";
-import { motion, AnimatePresence } from "framer-motion";
 import toast from "react-hot-toast";
+
+import { motion, AnimatePresence } from "framer-motion";
+import { apiConnector } from "../../../services/apiConnector";
+import { applicationEndpoint } from "../../../services/apis";
 
 const steps = ["Personal Information", "Job Details", "Uploads"];
 
@@ -67,14 +70,32 @@ export default function JobApplicationForm() {
 
   const prevStep = () => setStep((prev) => Math.max(prev - 1, 0));
 
-  const submitApplicationForm = (data) => {
+  const submitApplicationForm = async (data) => {
     const toastId = toast.loading("Loading...")
-    console.log("Form Data:", data);
-    toast.success("Application Received Successfully!")
-    reset();
-    setStep(0);
-    window.scrollTo({ top: 0, behavior: "smooth" });
-    // window.location.href = "/careers";
+    try {
+      const formData = new FormData();
+
+      formData.append("resume", data.resume[0]);
+      formData.append("data", JSON.stringify(data)); // All form values
+
+      const res = await apiConnector(
+        "POST", 
+        applicationEndpoint.APPLICATION_API,
+        formData,
+        { "Content-Type": "multipart/form-data" }
+      )
+
+      if(res.data.success) {
+        reset();
+        setStep(0);
+        toast.success("Application Received Successfully!")
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    }
+    catch(error) {
+      console.log("ERROR MESSAGE - ", error.message)
+      toast.error("Something went wrong")
+    }
     toast.dismiss(toastId)
   };
 
@@ -102,7 +123,7 @@ export default function JobApplicationForm() {
                   { name: "address", label: "Current Address" },
                 ].map((field, idx) => (
                   <div key={idx} className={field.name === "address" || field.name === "gender" ? "md:col-span-2" : ""}>
-                    <label className="block text-black">{field.label}</label>
+                    <label className="block text-black" htmlFor={field.name}>{field.label}</label>
                     {field.type === "select" ? (
                       <select {...register(field.name, { required: true })} className="w-full p-3 mt-1 rounded-lg bg-black/10 text-sm placeholder:text-[#6E727F] text-black">
                         {field.options.map((opt, i) => 
@@ -112,12 +133,17 @@ export default function JobApplicationForm() {
                     ) : (
                       <input
                         type={field.type}
-                        {...register(field.name, { required: true })}
+                        name={field.name}
+                        id={field.name}
                         placeholder={`Enter ${field.label.toLowerCase()}`}
+                        {...register(field.name, { required: true })}
                         className="w-full p-3 mt-1 rounded-lg bg-black/10 text-sm text-black placeholder:text-[#6E727F]"
                       />
                     )}
-                    {errors[field.name] && <span className="text-red-500 text-sm">This field is required</span>}
+                    {errors[field.name] && 
+                      <span className="text-red-500 text-sm">
+                        This field is required
+                      </span>}
                   </div>
                 ))}
               </div>
@@ -128,17 +154,19 @@ export default function JobApplicationForm() {
             <motion.div key="step2" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {[
-                  { name: "jobRole", label: "Job Role", type: "text" },
-                  { name: "noticePeriod", label: "Notice Period", type: "tel" },
-                  { name: "currentCTC", label: "Current CTC", type: "tel" },
-                  { name: "expectedCTC", label: "Expected CTC", type: "tel" }
+                  { name: "jobRole", label: "Job Role", type: "text", placeholder: "N/A if not applicable" },
+                  { name: "noticePeriod", label: "Notice Period", type: "number", placeholder: "e.g. 2 (in weeks)" },
+                  { name: "currentCTC", label: "Current CTC", type: "number", placeholder: "e.g. 5 (in lacs)" },
+                  { name: "expectedCTC", label: "Expected CTC", type: "number", placeholder: "e.g. 10 (in lacs)" }
                   ].map((field, idx) => (
                   <div key={idx}>
-                    <label className="block text-black">{field.label}</label>
+                    <label className="block text-black" htmlFor={field.name}>{field.label}</label>
                     <input
                       type={field.type}
+                      name={field.name}
+                      id={field.name}
+                      placeholder={`${field.placeholder}`}
                       {...register(field.name, { required: true })}
-                      placeholder={`Enter ${field.label}`}
                       className="w-full p-3 mt-1 rounded-lg bg-black/10 text-sm text-black placeholder:text-[#6E727F]"
                     />
                     {errors[field.label] && <span className="text-red-500 text-sm">This field is required</span>}
@@ -148,13 +176,13 @@ export default function JobApplicationForm() {
                 <div className="md:col-span-2">
                   <label className="block text-black">Education Details</label>
                   {eduFields.map((field, index) => (
-                    <div key={field.id} className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4 relative">
-                      {["institution", "degree", "year"].map((attr) => (
+                    <div key={field.id} className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-4 relative">
+                      {["institution", "degree", "year", "percentage"].map((attr) => (
                         <input
                           key={attr}
                           {...register(`education.${index}.${attr}`, { required: true })}
                           placeholder={attr.charAt(0).toUpperCase() + attr.slice(1)}
-                          className="p-3 rounded-lg bg-black/10 text-sm text-black placeholder:text-[#6E727F]"
+                          className="mt-1 p-3 rounded-lg bg-black/10 text-sm text-black placeholder:text-[#6E727F]"
                         />
                       ))}
                       <button type="button" onClick={() => removeEdu(index)} className="absolute top-2 right-2 text-red-500 text-xl font-bold">&times;</button>
@@ -172,7 +200,7 @@ export default function JobApplicationForm() {
                           key={attr}
                           {...register(`employment.${index}.${attr}`, { required: true })}
                           placeholder={attr.charAt(0).toUpperCase() + attr.slice(1)}
-                          className="p-3 rounded-lg bg-black/10 text-sm text-black placeholder:text-[#6E727F]"
+                          className="mt-1 p-3 rounded-lg bg-black/10 text-sm text-black placeholder:text-[#6E727F]"
                         />
                       ))}
                       <button type="button" onClick={() => removeEmp(index)} className="absolute top-2 right-2 text-red-500 text-xl font-bold">&times;</button>
@@ -193,6 +221,7 @@ export default function JobApplicationForm() {
                       <input
                         type="file"
                         id="resume"
+                        name="resume"
                         accept=".pdf,.doc,.docx"
                         {...register("resume", {
                           required: true,

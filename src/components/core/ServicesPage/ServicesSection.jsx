@@ -1,24 +1,16 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Icon1 from '../../../assets/images/Services/icon1.png'
-import Icon2 from '../../../assets/images/Services/icon2.png'
-import Icon3 from '../../../assets/images/Services/icon3.png'
-import Icon4 from '../../../assets/images/Services/icon4.png'
-import Icon5 from '../../../assets/images/Services/icon5.png'
-
-const solarServices = [
-  { id: 1, title: "EPC | Turnkey Solutions", icon: Icon1, link: "/services/end-to-end" },
-  { id: 2, title: "C & I Solutions", icon: Icon2, link: "/services/epc" },
-  { id: 3, title: "Rooftop Solar", icon: Icon3, link: "/services/rooftop" },
-  { id: 4, title: "Ground Mount | Floating Solar", icon: Icon4, link: "/services/om" },
-  { id: 5, title: "O & M Services", icon: Icon5, link: "/services/value-added" },
-];
+import Icon1 from '../../../assets/images/Services/icon1.svg'
+import Icon2 from '../../../assets/images/Services/icon2.svg'
+import Icon3 from '../../../assets/images/Services/icon3.svg'
+import Icon4 from '../../../assets/images/Services/icon4.svg'
+import Icon5 from '../../../assets/images/Services/icon5.svg'
 
 const services = [
-  { id: 1, title: "EPC | Turnkey Solutions", icon: Icon1, link: "/services/end-to-end" },
+  { id: 1, title: "EPC Solutions", icon: Icon1, link: "/services/end-to-end" },
   { id: 2, title: "C & I Solutions", icon: Icon2, link: "/services/epc" },
   { id: 3, title: "Rooftop Solar", icon: Icon3, link: "/services/rooftop" },
-  { id: 4, title: "Ground Mount | Floating Solar", icon: Icon4, link: "/services/om" },
+  { id: 4, title: "Ground Solar", icon: Icon4, link: "/services/om" },
   { id: 5, title: "O & M Services", icon: Icon5, link: "/services/value-added" },
 ];
 
