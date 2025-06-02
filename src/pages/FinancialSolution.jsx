@@ -6,9 +6,9 @@ const HeroSection = lazy(() => import('../components/core/HeroSection'))
 const FinancialSection = lazy(() => import('../components/core/FinancialSection'));
 const Footer = lazy(() => import('../components/common/Footer'))
 
-import capex from "../assets/images/Financials/capex.png"
-import opex from "../assets/images/Financials/opex.png"
-import dcapex from "../assets/images/Financials/dcapex.png"
+import capex from "../assets/images/Financials/capex2.svg"
+import opex from "../assets/images/Financials/opex1.svg"
+import dcapex from "../assets/images/Financials/dcapex1.svg"
 
 const Service = () => {
   useEffect(() => {

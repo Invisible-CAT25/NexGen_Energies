@@ -37,8 +37,11 @@ const FoundingStory = () => {
         </h2>
 
         <p className="text-base text-gray-900 lg:w-11/12 leading-relaxed">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. 
-          Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
+          Founded on January 28, 2025, NexGen Energies was established with a clear mission — to drive India’s transition toward clean, reliable, and future-ready energy solutions. Recognizing the growing demand for sustainable infrastructure, a group of passionate professionals came together to create a company focused on solar power generation and high-quality transmission systems. What started as a bold vision quickly evolved into a trusted name in the renewable energy sector.
+          <br />
+          From day one, our focus has been on combining technical excellence with environmental responsibility. Through utility-scale solar projects and robust transmission solutions, we aim to empower industries, institutions, and communities with dependable green energy. Every project we undertake reflects our values of innovation, quality, and long-term impact.
+          <br />
+          At NexGen Energies, we believe energy is more than a utility — it’s a catalyst for progress. As we continue to grow, our commitment remains rooted in building a sustainable and resilient energy future for India and beyond.
         </p>
       </motion.div>
     </section>

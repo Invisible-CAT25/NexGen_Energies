@@ -23,7 +23,7 @@ const FinancialSection = ({ active = false, name, description, image}) => {
             src={image ? image : continental}
             alt="Project Preview"
             loading="lazy"
-            className="w-full rounded-xl shadow-md"
+            className="w-full"
           />
         </motion.div>
 

@@ -11,6 +11,7 @@ const allProjects = [
     location: "Continental, Modipuram, Meerut",
     category: ["EPC", "Rooftop", "C & I"],
     image: continental,
+    description: "Commissioned 1.5 MW solar power plant for Continental at Modipuram, Meerut, enhancing energy efficiency and sustainability. Fully operational, the project supports industrial operations with reliable clean energy."
   },
   {
     id: 2,
@@ -18,6 +19,7 @@ const allProjects = [
     location: "Luminous, Schneider, Kolkata",
     category: ["Rooftop", "C & I"],
     image: continental,
+    description: "Ongoing 1 MW solar project at Luminous, Schneider, Kolkata, designed to enhance industrial sustainability. Currently under execution, this project aims to integrate clean energy into core operations."
   },
   {
     id: 3,
@@ -25,6 +27,7 @@ const allProjects = [
     location: "Luminous, Schneider, Hyderabad",
     category: ["Rooftop", "C & I"],
     image: continental,
+    description: "Ongoing 1 MW solar project at Luminous, Schneider, Hyderabad, designed to enhance industrial sustainability. Currently under execution, this project aims to integrate clean energy into core operations."
   },
   {
     id: 4,
@@ -32,6 +35,7 @@ const allProjects = [
     location: "RRECL, Rajasthan",
     category: ["Rooftop"],
     image: continental,
+    description: "Ongoing 71 MW solar project at RRECL, Rajasthan, designed to enhance industrial sustainability. Currently under execution, this project aims to integrate clean energy into core operations."
   }
   // Add more projects...
 ];
@@ -151,9 +155,7 @@ export default function ProjectsSection() {
                 <h3 className="text-2xl font-bold mb-1">{selectedProject.title}</h3>
                 <p className="text-gray-600 mb-3">{selectedProject.location}</p>
                 <p className="text-gray-700 text-sm">
-                  {/* Placeholder for extra details */}
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-                  sodales lorem at justo blandit, at pharetra risus ullamcorper.
+                  {selectedProject.description}
                 </p>
               </motion.div>
             </motion.div>
