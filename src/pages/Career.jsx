@@ -7,8 +7,8 @@ const Footer = lazy(() => import('../components/common/Footer'))
 const SectionTemplate = lazy(() => import('../components/core/SectionTemplate'))
 const JobApplicationForm = lazy(() => import('../components/core/CareerPage/CareerForm'))
 
-import image1 from '../assets/images/Careers/image4.png'
-import image2 from '../assets/images/Careers/image2.png'
+import image1 from '../assets/images/Careers/image2.png'
+import image2 from '../assets/images/Careers/image1.png'
 import image3 from '../assets/images/Careers/image3.png'
 
 const Career = () => {

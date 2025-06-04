@@ -11,6 +11,7 @@ import opex from "../assets/images/Financials/opex.svg"
 import dcapex from "../assets/images/Financials/dcapex.svg"
 
 const Service = () => {
+
   useEffect(() => {
     document.title = "Financial Solutions | NexGen Energies";
     window.scrollTo(0, 0);
@@ -21,7 +22,7 @@ const Service = () => {
       <Suspense fallback={<div className="min-h-screen flex items-center justify-center">Loading...</div>}>
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }} className="snap-start">
           <HeroSection title="Financial Solutions" />
-          <FinancialSection 
+          <FinancialSection
             image={capex}
             name={"CAPEX"} 
             description={"Under the CAPEX (Capital Expenditure) model, the customer fully owns the rooftop solar power system. This model is ideal for businesses and individuals looking to reduce long-term electricity costs through direct investment in solar infrastructure. The customer is responsible for the entire upfront capital expenditure and, in return, benefits from significant savings on energy bills by generating their own clean and renewable power. All financial gains from tariff savings accrue directly to the customer, who also retains ownership of both the rooftop and the solar plant. Furthermore, clients can take advantage of accelerated depreciation benefits of up to 80%, improving the overall return on investment and reducing the payback period. To ensure seamless performance and efficiency, our expert EPC (Engineering, Procurement, and Construction) team offers comprehensive annual operations and maintenance (O&M) services at a mutually agreed cost. This ensures your solar plant operates optimally throughout its lifecycle."} 

@@ -10,12 +10,18 @@ import vi from "../../../assets/images/Home_Assets/vi.png";
 import continental from "../../../assets/images/Home_Assets/continental.png";
 import rrecl from "../../../assets/images/Home_Assets/rrecl.png";
 import luminous from "../../../assets/images/Home_Assets/luminous.png";
+import upneda from "../../../assets/images/Home_Assets/upneda.png"
+import uppcl from "../../../assets/images/Home_Assets/uppcl.png"
+import bsnl from "../../../assets/images/Home_Assets/bsnl.png"
 
 const clients = [
   { src: continental, alt: "Continental Tyres", height: "h-28" },
   { src: rrecl, alt: "RRECL Government Client", height: "h-28" },
   { src: luminous, alt: "Luminous Energy", height: "h-28" },
   { src: vi, alt: "Vi Telecom", height: "h-20" },
+  { src: upneda, alt: "UpNeda", height: "h-28" },
+  { src: uppcl, alt: "Uppcl", height: "h-24" },
+  { src: bsnl, alt: "Bsnl", height: "h-28" },
 ];
 
 const ClientSlider = () => {

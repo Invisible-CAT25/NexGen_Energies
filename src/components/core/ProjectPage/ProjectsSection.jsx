@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import continental from '../../../assets/images/project.png'
+import bsnl from '../../../assets/images/Projects/bsnl.png'
 
 const filters = ["All", "EPC", "PPA", "O & M"];
 
@@ -36,7 +37,16 @@ const allProjects = [
     category: ["EPC"],
     image: continental,
     description: "Ongoing 71 MW solar project at RRECL, Rajasthan, designed to enhance industrial sustainability. Currently under execution, this project aims to integrate clean energy into core operations."
-  }
+  },
+  {
+    id: 5,
+    title: "25 MW",
+    location: "BSNL, India",
+    category: ["EPC"],
+    image: bsnl,
+    description: "Ongoing 25 MW solar project at BSNL, India, designed to enhance industrial sustainability. Currently under execution, this project aims to integrate clean energy into core operations."
+  },
+
   // Add more projects...
 ];
 

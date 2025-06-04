@@ -4,14 +4,14 @@ import { motion, AnimatePresence } from "framer-motion";
 import HighlightText from "../../common/HighlightText";
 
 const faqs = [
-  { question: "What does NexGen Energies do?", answer: "NexGen Energies specializes in renewable energy solutions, offering cutting-edge solar, wind, and battery storage technologies." },
-  { question: "Where does NexGen Energies operate?", answer: "We operate globally, with key installations in North America, Europe, and Southeast Asia." },
-  { question: "What services does NexGen Energies offer?", answer: "We offer consultation, design, installation, and maintenance for renewable energy systems." },
-  { question: "What is NexGen Energies's renewable energy capacity?", answer: "Our capacity exceeds 5 GW across multiple projects." },
-  { question: "How does NexGen Energies contribute to sustainability?", answer: "Through green innovations and carbon offset programs, we aim to build a more sustainable future." },
-  { question: "How is NexGen Energies fighting climate change?", answer: "By replacing fossil fuels with renewable solutions and promoting eco-efficiency." },
-  { question: "What recognition has NexGen Energies received?", answer: "We’ve been awarded the Global Clean Energy Award three years in a row." },
-  { question: "How to reach NexGen Energies for queries or collaboration?", answer: "You can reach us via our contact page or email at info@nexgenenergies.co.in" }
+  { question: "What does NexGen Energies do?", answer: "NexGen Energies provides end-to-end renewable energy solutions, specializing in solar power and power transmission projects." },
+  { question: "Why should I invest in solar energy?", answer: "Solar energy reduces electricity bills, increases property value, and supports a sustainable future with attractive government incentives." },
+  { question: "How do I know if my property is suitable for solar panels?", answer: "Our experts assess your location, roof condition, and sunlight availability to determine solar feasibility." },
+  { question: "What types of solar systems do you offer?", answer: "We offer on-grid, off-grid, and hybrid solar systems tailored to commercial and industrial needs." },
+  { question: "How long does it take to install a solar power system?", answer: "Installation typically takes 1–3 weeks, depending on the project size and site conditions." },
+  { question: "What warranties do you offer on solar panels and systems?", answer: "We provide up to 25 years performance warranty on panels and 5–10 years on inverters and installation." },
+  { question: "Does NexGen Energies handle permits and government approvals?", answer: "Yes, we manage all necessary permits, documentation, and approvals for a hassle-free experience." },
+  { question: "How can I contact NexGen Energies for further inquires?", answer: "You can reach us via our contact form, email, or phone listed on the Contact Us page." }
 ];
 
 const FAQSection = () => {

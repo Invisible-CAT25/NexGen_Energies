@@ -17,14 +17,14 @@ const awards = [
     alt: "Award Ceremony Image",
   },
   {
-    title: "Won Best Commercial Rooftop Installation Company Award",
-    description: "Recognized for excellence in large-scale rooftop installations across India.",
+    title: "Won CEO of the Year Award at National Feather Awards",
+    description: "A Moment of Pride. His Leadership continues to drive Innovation and Excellence.",
     image: award2,
     alt: "Award Ceremony Image",
   },
   {
-    title: "Won Best Commercial Rooftop Installation Company Award",
-    description: "Recognized for excellence in large-scale rooftop installations across India.",
+    title: "Won Emerging C & I Solar Player 2025 at REconnect Summit",
+    description: "Recognized for our commitment to Customer Centricity and Sustainability.",
     image: award3,
     alt: "Award Ceremony Image",
   },

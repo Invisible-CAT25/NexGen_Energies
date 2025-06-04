@@ -24,7 +24,7 @@ const LeadersTemplate = ({image, name, designation, about, property}) => {
             <br />
             <p>{about[2]}</p>
             <br />
-            <ul className='list-disc'>
+            <ul className='list-disc px-10'>
                 {about[3].map((keypoint, index) => (
                     <li key={index}>{keypoint}</li>
                 ))}
