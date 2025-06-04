@@ -2,14 +2,14 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import continental from '../../../assets/images/project.png'
 
-const filters = ["All", "EPC", "C & I", "Rooftop", "Ground Mount"];
+const filters = ["All", "EPC", "PPA", "O & M"];
 
 const allProjects = [
   {
     id: 1,
     title: "1.5 MW",
     location: "Continental, Modipuram, Meerut",
-    category: ["EPC", "Rooftop", "C & I"],
+    category: ["EPC"],
     image: continental,
     description: "Commissioned 1.5 MW solar power plant for Continental at Modipuram, Meerut, enhancing energy efficiency and sustainability. Fully operational, the project supports industrial operations with reliable clean energy."
   },
@@ -17,7 +17,7 @@ const allProjects = [
     id: 2,
     title: "1 MW",
     location: "Luminous, Schneider, Kolkata",
-    category: ["Rooftop", "C & I"],
+    category: ["PPA"],
     image: continental,
     description: "Ongoing 1 MW solar project at Luminous, Schneider, Kolkata, designed to enhance industrial sustainability. Currently under execution, this project aims to integrate clean energy into core operations."
   },
@@ -25,7 +25,7 @@ const allProjects = [
     id: 3,
     title: "1 MW",
     location: "Luminous, Schneider, Hyderabad",
-    category: ["Rooftop", "C & I"],
+    category: ["PPA"],
     image: continental,
     description: "Ongoing 1 MW solar project at Luminous, Schneider, Hyderabad, designed to enhance industrial sustainability. Currently under execution, this project aims to integrate clean energy into core operations."
   },
@@ -33,7 +33,7 @@ const allProjects = [
     id: 4,
     title: "71 MW",
     location: "RRECL, Rajasthan",
-    category: ["Rooftop"],
+    category: ["EPC"],
     image: continental,
     description: "Ongoing 71 MW solar project at RRECL, Rajasthan, designed to enhance industrial sustainability. Currently under execution, this project aims to integrate clean energy into core operations."
   }

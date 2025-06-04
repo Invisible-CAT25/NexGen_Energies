@@ -6,7 +6,7 @@ const FoundingStory = lazy(() => import('../components/core/AboutPage/FoundingSt
 const MissionVision = lazy(() => import('../components/core/AboutPage/MissionVision'));
 const Leaders = lazy(() => import('../components/core/AboutPage/Leaders'));
 const Values = lazy(() => import('../components/core/AboutPage/Values'));
-const OurClients = lazy(() => import('../components/core/HomePage/OurClients'));
+const ClientSlider = lazy(() => import('../components/core/HomePage/OurClients'));
 const Footer = lazy(() => import('../components/common/Footer'));
 
 const About = () => {
@@ -24,7 +24,7 @@ const About = () => {
           <MissionVision />
           <Leaders />
           <Values />
-          <OurClients />
+          <ClientSlider />
           <Footer />
         </motion.div>
       </Suspense>

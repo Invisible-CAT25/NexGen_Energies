@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import HighlightText from "../../common/HighlightText";
 
 import vi from "../../../assets/images/Home_Assets/vi.png";
-import continental from "../../../assets/images/Home_Assets/continental4.svg";
+import continental from "../../../assets/images/Home_Assets/continental.png";
 import rrecl from "../../../assets/images/Home_Assets/rrecl.png";
 import luminous from "../../../assets/images/Home_Assets/luminous.png";
 
@@ -40,7 +40,6 @@ const ClientSlider = () => {
             slidesPerView={2}
             loop
             autoplay={{ delay: 2500 }}
-            pagination={{ clickable: true }}
             breakpoints={{
               640: { slidesPerView: 2 },
               768: { slidesPerView: 3 },

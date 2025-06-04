@@ -75,7 +75,7 @@ const ServicesSection = () => {
             Power Transmission
           </h3>
 
-          <ServiceBtn linkto="/financial-solutions">Power and Civil Services</ServiceBtn>
+          <ServiceBtn linkto="/">Civil and Tower Infrastructure</ServiceBtn>
         </div>
 
         {/* Overlay */}

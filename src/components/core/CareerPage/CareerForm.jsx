@@ -154,8 +154,8 @@ export default function JobApplicationForm() {
             <motion.div key="step2" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {[
-                  { name: "jobRole", label: "Job Role", type: "text", placeholder: "N/A if not applicable" },
-                  { name: "noticePeriod", label: "Notice Period", type: "number", placeholder: "e.g. 2 (in weeks)" },
+                  { name: "jobRole", label: "Current Job Role", type: "text", placeholder: "N/A if not applicable" },
+                  { name: "noticePeriod", label: "Notice Period", type: "number", placeholder: "e.g. 2 (in days)" },
                   { name: "currentCTC", label: "Current CTC", type: "number", placeholder: "e.g. 5 (in lacs)" },
                   { name: "expectedCTC", label: "Expected CTC", type: "number", placeholder: "e.g. 10 (in lacs)" }
                   ].map((field, idx) => (

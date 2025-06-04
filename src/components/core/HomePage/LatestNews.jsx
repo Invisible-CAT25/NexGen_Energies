@@ -5,26 +5,27 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { motion } from "framer-motion";
 import HighlightText from "../../common/HighlightText";
-import latestNews from "../../../assets/images/Home_Assets/latest_news1.png";
+import award1 from "../../../assets/images/Home_Assets/award1.png";
+import award2 from "../../../assets/images/Home_Assets/award2.png";
+import award3 from "../../../assets/images/Home_Assets/award3.png";
 
-// Dummy data (replace with dynamic props if needed later)
 const awards = [
   {
     title: "Won Best Commercial Rooftop Installation Company Award",
     description: "Recognized for excellence in large-scale rooftop installations across India.",
-    image: latestNews,
+    image: award1,
     alt: "Award Ceremony Image",
   },
   {
     title: "Won Best Commercial Rooftop Installation Company Award",
     description: "Recognized for excellence in large-scale rooftop installations across India.",
-    image: latestNews,
+    image: award2,
     alt: "Award Ceremony Image",
   },
   {
     title: "Won Best Commercial Rooftop Installation Company Award",
     description: "Recognized for excellence in large-scale rooftop installations across India.",
-    image: latestNews,
+    image: award3,
     alt: "Award Ceremony Image",
   },
 ];
@@ -45,7 +46,7 @@ const LatestNews = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: false }}
         >
-          <HighlightText text="Latest News" />
+          <HighlightText text="Awards & Recognition" />
         </motion.h2>
 
         {/* Swiper Carousel */}

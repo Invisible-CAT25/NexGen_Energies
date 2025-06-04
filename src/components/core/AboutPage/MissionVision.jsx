@@ -6,16 +6,16 @@ import Icon3 from "../../../assets/images/Home_Assets/subLogo3.svg";
 
 const features = [
   {
-    icon: Icon1,
-    title: "Our Mission",
-    description:
-      "Powering a greener future with clean energy and strong transmission, while reducing carbon emissions for a sustainable tomorrow.",
-  },
-  {
     icon: Icon2,
     title: "Our Vision",
     description:
       "To lead the way in clean energy by advancing renewable innovation and reliable power transmission for a sustainable planet.",
+  },
+  {
+    icon: Icon1,
+    title: "Our Mission",
+    description:
+      "Powering a greener future with clean energy and strong transmission, while reducing carbon emissions for a sustainable tomorrow.",
   },
   {
     icon: Icon3,

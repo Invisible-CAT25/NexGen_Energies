@@ -11,8 +11,12 @@ const footerLinks = [
 ];
 
 const offices = [
-  "Haryana", "Rajasthan", "Madhya Pradesh", "Maharashtra", "Odisha", "Jharkhand", "Chhattisgarh"
+  "Haryana", "Delhi-NCR", "Rajasthan", "Madhya Pradesh", "Maharashtra", "Uttrakhand", "Andhra Pradesh"
 ];
+
+const offices2 = [
+  "Telangana", "West Bengal", "Odisha", "Jharkhand", "Chhattisgarh", "Bihar", "Uttar Pradesh"
+]
 
 const Footer = () => {
   return (
@@ -24,7 +28,7 @@ const Footer = () => {
       transition={{ duration: 0.6 }}
     >
       <div className="w-11/12 max-w-7xl mx-auto py-12">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-5 gap-10">
           {/* Logo and Tagline */}
           <div>
             <img
@@ -59,9 +63,18 @@ const Footer = () => {
 
           {/* Offices */}
           <div>
-            <h3 className="font-bold text-lg mb-3">Our Offices</h3>
+            <h3 className="font-bold text-lg mb-3">Our Presence</h3>
             <ul className="space-y-2">
               {offices.map((office, idx) => (
+                <li key={idx} className="text-gray-700">{office}</li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <div className="hidden md:mb-10 md:block"></div>
+            <ul className="space-y-2">
+              {offices2.map((office, idx) => (
                 <li key={idx} className="text-gray-700">{office}</li>
               ))}
             </ul>

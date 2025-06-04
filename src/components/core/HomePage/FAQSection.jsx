@@ -11,7 +11,7 @@ const faqs = [
   { question: "How does NexGen Energies contribute to sustainability?", answer: "Through green innovations and carbon offset programs, we aim to build a more sustainable future." },
   { question: "How is NexGen Energies fighting climate change?", answer: "By replacing fossil fuels with renewable solutions and promoting eco-efficiency." },
   { question: "What recognition has NexGen Energies received?", answer: "We’ve been awarded the Global Clean Energy Award three years in a row." },
-  { question: "How to reach NexGen Energies for queries or collaboration?", answer: "You can reach us via our contact page or email at contact@nexgen.com." }
+  { question: "How to reach NexGen Energies for queries or collaboration?", answer: "You can reach us via our contact page or email at info@nexgenenergies.co.in" }
 ];
 
 const FAQSection = () => {

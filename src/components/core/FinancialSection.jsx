@@ -1,6 +1,5 @@
 import React from "react";
 import HighlightText from "../common/HighlightText";
-import continental from "../../assets/images/project.png";
 import { motion } from "framer-motion";
 
 const FinancialSection = ({ active = false, name, description, image}) => {
@@ -20,7 +19,7 @@ const FinancialSection = ({ active = false, name, description, image}) => {
           viewport={{ once: false }}
         >
           <img
-            src={image ? image : continental}
+            src={image}
             alt="Project Preview"
             loading="lazy"
             className="w-full"

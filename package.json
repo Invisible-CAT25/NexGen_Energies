@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "GENERATE_SOURCEMAP=false react-scripts build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
@@ -17,6 +17,7 @@
     "axios": "^1.9.0",
     "framer-motion": "^12.11.3",
     "gsap": "^3.13.0",
+    "leaflet": "^1.9.4",
     "lucide-react": "^0.510.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

@@ -13,7 +13,7 @@ const contactDetails = [
   {
     icon: "BiWorld",
     heading: "Visit us",
-    description: "Come and say hello at our office HQ.",
+    description: "Come and say hello at our Corporate office.",
     details:
       "Unit No. 1032, 10th Floor, Tower A, Spaze-I-Tech Park, Sector 49, Sohna Road, Gurugram - 122018",
   },
@@ -21,7 +21,7 @@ const contactDetails = [
     icon: "IoCall",
     heading: "Call us",
     description: "Mon - Fri From 10am to 6pm",
-    details: "+91 987 039 7770",
+    details: "+91 124 449 6938",
   },
 ]
 

@@ -28,7 +28,7 @@
     {
       icon: Icon4,
       title: "Timely Project Delivery",
-      description: "We value your time. Our team ensures on-time execution with no compromises.",
+      description: "We value your time. Our team ensures timely execution without compromise.",
     },
     {
       icon: Icon5,
