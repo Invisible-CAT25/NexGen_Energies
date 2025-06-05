@@ -11,19 +11,19 @@ import award3 from "../../../assets/images/Home_Assets/award3.png";
 
 const awards = [
   {
-    title: "Won Best Commercial Rooftop Installation Company Award",
-    description: "Recognized for excellence in large-scale rooftop installations across India.",
-    image: award1,
-    alt: "Award Ceremony Image",
-  },
-  {
-    title: "Won Emerging C & I Solar Player 2025 at REconnect Summit",
+    title: "Emerging C & I Solar Player 2025 at REconnect Summit",
     description: "Recognized for our commitment to Customer Centricity and Sustainability.",
     image: award3,
     alt: "Award Ceremony Image",
   },
   {
-    title: "Won CEO of the Year Award at National Feather Awards",
+    title: "Best Commercial Rooftop Installation Company Award",
+    description: "Recognized for excellence in large-scale rooftop installations across India.",
+    image: award1,
+    alt: "Award Ceremony Image",
+  },
+  {
+    title: "CEO of the Year Award at National Feather Awards",
     description: "A Moment of Pride. His Leadership continues to drive Innovation and Excellence.",
     image: award2,
     alt: "Award Ceremony Image",

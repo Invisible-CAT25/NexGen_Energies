@@ -20,6 +20,7 @@ import Contact from './pages/Contact'
 
 // Data of leaders
 import { Leader } from './data/leaders'
+import NotFound from './pages/NotFound';
 
 function App() {
 
@@ -91,6 +92,8 @@ function App() {
             property={"-right-90"}
             about={Leader[4].about}
         />} />
+
+        <Route path='*' element={<NotFound />} />
 
       </Routes>
     </div>
