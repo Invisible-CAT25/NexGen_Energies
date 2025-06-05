@@ -17,7 +17,7 @@ const Footer = lazy(() => import('../components/common/Footer'));
 
 const Home = () => {
   useLayoutEffect(() => {
-    document.title = 'NexGen Energies | Sustainable Solar Power Solutions';
+    document.title = 'NexGen Energies | Solar & Power Transmission Solutions';
     window.scrollTo(0, 0);
     smoothscroll.polyfill();
   }, []);
