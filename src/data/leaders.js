@@ -10,17 +10,18 @@ export const Leader = [
         designation: "-CEO",
         image: image1,
         about: [
-            "Ravi Gupta is a PMP-certified Engineering Graduate with over 20 years of extensive experience in Business Operations, Project and Program Management, and Service Delivery across diverse sectors including Telecom, Smart Cities, Mobility & Transport, and Urban Infrastructure. His career is built on successfully delivering complex ICT/ITES/EPC projects, driving innovation, and aligning operations with strategic business objectives.",
-            "As the Business Head at NexGen, Ravi leads the end-to-end management of business pipelines across key verticals—Telecom, EV Charging, and Renewable Energy. He is responsible for driving strategic growth, market expansion, and ensuring operational excellence, while effectively aligning cross-functional teams to achieve long-term organizational goals.",
-            "Throughout his career, Ravi has spearheaded several high-value and mission-critical projects, including:",
-            ["Bhorgarh Industrial Area IoT-Based Street Lighting – valued at INR 112 million",
-              "Guwahati Spine Roads Lighting Project – valued at INR 250 million",
-              "Vadodara Smart City Project – awarded SKOCH and Business World Awards",
-              "World’s Largest Network Consolidation Project – for Vodafone and Idea",
-              "Mumbai Trans-Harbour Link ITMS Implementation (ATAL SETU) – valued at INR 1,890 million"
+            "Neeraj Kumar is a dynamic and forward-thinking business leader with over a decade of experience in strategic leadership, financial management, and operational excellence. As the Chief Executive Officer of NexGen Digital Infrastructures, he is the driving force behind the company’s vision, growth strategy, and transformation journey across telecom, energy, and digital infrastructure sectors.",
+            "With a robust background spanning corporate finance, governance, and cross-functional operations, Neeraj has consistently delivered impactful results by combining strategic foresight with executional discipline. His career includes notable tenures at Summit Digitel Infrastructure and Indus Towers Ltd., where he played key roles in business planning, resource optimization, and performance management.",
+            "At NexGen, Neeraj leads:",
+            ["Strategic direction and business planning for growth and diversification",
+              "Cross-functional leadership to align teams with the company’s mission and market dynamics",
+              "Financial structuring, governance frameworks, and capital efficiency strategies",
+              "Technology-driven innovation in service delivery and operational models",
+              "Partnerships and alliances to expand NexGen’s national footprint and digital solutions portfolio",
+              "Talent development initiatives and mentorship for emerging leaders within the organization"
             ],
-            "His experience also includes integrating city data systems using AI and ML technologies, demonstrating his ability to lead technologically advanced and future-ready solutions.",
-            "Ravi’s professional development includes certifications in PMP, Six Sigma Green Belt, ITIL, Agile, and Scrum. These credentials reflect his deep commitment to process excellence, continuous improvement, and collaborative leadership. His strategic approach and operational insight have consistently led to minimized productivity gaps, enhanced value delivery, and significant contributions to organizational growth."              
+            "A firm believer in the power of continuous learning, Neeraj is pursuing the Accelerated General Management Programme (AGMP) from IIM Ahmedabad to deepen his expertise in strategic decision-making, financial acumen, and organizational transformation. His passion for leadership is grounded in sustainable growth, impact-driven innovation, and nurturing a high-performance culture.",
+            "Neeraj is also committed to mentorship and societal development, firmly believing that leadership is not just about corporate outcomes—but about creating enduring value for people, communities, and industries."              
         ]
     },
     {
