@@ -23,8 +23,8 @@ const awards = [
     alt: "Award Ceremony Image",
   },
   {
-    title: "CEO of the Year Award at National Feather Awards",
-    description: "A Moment of Pride. His Leadership continues to drive Innovation and Excellence.",
+    title: "Most Preferred Solar EPC in the Telecom Industry",
+    description: "Recognized for the most preferred solar EPC in the telecom industry.",
     image: award2,
     alt: "Award Ceremony Image",
   },
