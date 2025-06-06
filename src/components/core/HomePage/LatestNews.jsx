@@ -24,7 +24,7 @@ const awards = [
   },
   {
     title: "Most Preferred Solar EPC in the Telecom Industry",
-    description: "Recognized for the most preferred solar EPC in the telecom industry.",
+    description: "Recognized for the most preferred solar EPC in the telecom industry across India.",
     image: award2,
     alt: "Award Ceremony Image",
   },
