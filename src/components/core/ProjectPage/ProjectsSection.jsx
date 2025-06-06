@@ -117,7 +117,7 @@ export default function ProjectsSection() {
                   className="rounded mb-4"
                 />
                 <h3 className="text-2xl font-bold mb-1">{selectedProject.title}</h3>
-                <p className="text-gray-600 mb-3">{selectedProject.location}</p>
+                <p className="text-gray-600 mb-3">{selectedProject.fullLocation}</p>
                 <p className="text-gray-700 text-sm">
                   {selectedProject.description}
                 </p>
