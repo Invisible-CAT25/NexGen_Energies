@@ -37,7 +37,7 @@ const LeadersTemplate = ({image, name, designation, about, property}) => {
         </div>
 
         <Button linkto={"/about-us#ourleaders"}>
-            More Leaders
+            Our Leaders
         </Button>
         <br></br>
     </div>
