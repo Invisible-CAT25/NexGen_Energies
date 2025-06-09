@@ -7,7 +7,6 @@ const ContactForm = () => {
     style={{ boxShadow: "0 4px 20px rgba(34, 197, 94, 0.3)" }}>
       <h1 className="text-4xl leading-10 font-semibold text-black">
         Got an Idea? We&apos;ve got the skills. 
-        <br />
         Let&apos;s team up
       </h1>
       <p>

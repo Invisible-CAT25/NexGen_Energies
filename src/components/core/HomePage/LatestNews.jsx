@@ -11,21 +11,21 @@ import award3 from "../../../assets/images/Home_Assets/award3.png";
 
 const awards = [
   {
-    title: "Emerging C & I Solar Player 2025 at REconnect Summit",
+    title: "Emerging C & I Solar Player 2025 Award",
     description: "Recognized for our commitment to Customer Centricity and Sustainability.",
-    image: award3,
+    image: award1,
     alt: "Award Ceremony Image",
   },
   {
-    title: "Best Commercial Rooftop Installation Company Award",
+    title: "Best Commercial Rooftop Installation Company ",
     description: "Recognized for excellence in large-scale rooftop installations across India.",
-    image: award1,
+    image: award2,
     alt: "Award Ceremony Image",
   },
   {
     title: "Most Preferred Solar EPC in the Telecom Industry",
     description: "Recognized for the most preferred solar EPC in the telecom industry across India.",
-    image: award2,
+    image: award3,
     alt: "Award Ceremony Image",
   },
 ];

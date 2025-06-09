@@ -1,5 +1,10 @@
 import continental from '../assets/images/Projects/continental.png'
 import bsnl from '../assets/images/Projects/bsnl.png'
+import luminous1 from '../assets/images/Projects/luminous1.png'
+import luminous2 from '../assets/images/Projects/luminous2.png'
+import tonk1 from '../assets/images/Projects/tonk1.png'
+import tonk2 from '../assets/images/Projects/tonk2.png'
+import rajsamand from '../assets/images/Projects/rajsamand.png'
 
 export const Projects = [
     {
@@ -14,20 +19,20 @@ export const Projects = [
     {
         id: 2,
         title: "1 MW",
-        location: "Schneider, Kolkata",
-        fullLocation: "Luminous, Schneider, Kolkata",
+        location: "SEIPL, Kolkata",
+        fullLocation: "Luminous, SEIPL, Kolkata",
         category: ["PPA"],
-        image: continental,
-        description: "Ongoing 1 MW solar project at Luminous, Schneider, Kolkata, designed to enhance industrial sustainability. Currently under execution, this project aims to integrate clean energy into core operations."
+        image: luminous1,
+        description: "Ongoing 1 MW solar project at Luminous, SEIPL, Kolkata, designed to enhance industrial sustainability. Currently under execution, this project aims to integrate clean energy into core operations."
     },
     {
         id: 3,
         title: "1 MW",
-        location: "Schneider, Hyderabad",
-        fullLocation: "Luminous, Schneider, Hyderabad",
+        location: "SEIPL, Hyderabad",
+        fullLocation: "Luminous, SEIPL, Hyderabad",
         category: ["PPA"],
-        image: continental,
-        description: "Ongoing 1 MW solar project at Luminous, Schneider, Hyderabad, designed to enhance industrial sustainability. Currently under execution, this project aims to integrate clean energy into core operations."
+        image: luminous2,
+        description: "Ongoing 1 MW solar project at Luminous, SEIPL, Hyderabad, designed to enhance industrial sustainability. Currently under execution, this project aims to integrate clean energy into core operations."
     },
     {
         id: 4,
@@ -44,7 +49,7 @@ export const Projects = [
         location: "Tonk, Rajasthan",
         fullLocation: "Principal Government Polytechnic C/O College, Tonk, Rajasthan",
         category: ["EPC"],
-        image: bsnl,
+        image: tonk1,
         description: "Commissioned 200 KW solar power plant for Principal Government Polytechnic C/O College, enhancing energy efficiency and sustainability. Fully operational, the project supports industrial operations with reliable clean energy."
     },
     {
@@ -53,16 +58,16 @@ export const Projects = [
         location: "Tonk, Rajasthan",
         fullLocation: "Principal Medical Office, Tonk, Rajasthan",
         category: ["EPC"],
-        image: bsnl,
+        image: tonk2,
         description: "Commissioned 400 KW solar power plant for Principal Medical Office, enhancing energy efficiency and sustainability. Fully operational, the project supports industrial operations with reliable clean energy."
     },
     {
         id: 7,
         title: "75 KW",
-        location: "RajSamand, Rajasthan",
+        location: "Rajsamand, Rajasthan",
         fullLocation: "Jhiladhish Office, RajSamand, Rajasthan",
         category: ["EPC"],
-        image: bsnl,
+        image: rajsamand,
         description: "Commissioned 75 KW solar power plant for Jhiladhish Office, enhancing energy efficiency and sustainability. Fully operational, the project supports industrial operations with reliable clean energy."
     },
 

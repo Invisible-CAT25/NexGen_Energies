@@ -24,16 +24,16 @@ const leaders = [
     link: "/vikas-mishra",
   },
   {
-    image: leader3,
-    name: "Ashish Gupta",
-    role: "Director Projects",
-    link: "/ashish-gupta",
-  },
-  {
     image: leader4,
     name: "Ravi Gupta",
     role: "Business Head",
     link: "/ravi-gupta",
+  },
+  {
+    image: leader3,
+    name: "Ashish Gupta",
+    role: "Director Projects",
+    link: "/ashish-gupta",
   },
   {
     image: leader5,
@@ -49,6 +49,7 @@ const Leaders = () => {
       className="w-11/12 mx-auto mt-20 flex flex-col items-center gap-8"
       role="region"
       aria-label="Leadership Team Section"
+      id="ourleaders"
     >
       <motion.h2
         className="text-3xl md:text-4xl font-bold "

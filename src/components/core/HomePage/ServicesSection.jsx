@@ -45,8 +45,8 @@ const ServicesSection = () => {
           </h3>
 
           <div className="flex flex-col md:flex-row gap-4 md:items-center">
-            <ServiceBtn linkto="/financial-solutions">OPEX Model</ServiceBtn>
             <ServiceBtn linkto="/financial-solutions">CAPEX Model</ServiceBtn>
+            <ServiceBtn linkto="/financial-solutions">OPEX Model</ServiceBtn>
             <ServiceBtn linkto="/financial-solutions">Deferred CAPEX Model</ServiceBtn>
           </div>
         </div>

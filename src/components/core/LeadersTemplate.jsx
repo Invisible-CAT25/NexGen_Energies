@@ -1,4 +1,5 @@
 import React from 'react'
+import Button from '../common/Button'
 
 const LeadersTemplate = ({image, name, designation, about, property}) => {
   return (
@@ -33,8 +34,12 @@ const LeadersTemplate = ({image, name, designation, about, property}) => {
             <p>{about[4]}</p>
             <br />
             <p>{about[5]}</p>
-            <br />
         </div>
+
+        <Button linkto={"/about-us#ourleaders"}>
+            More Leaders
+        </Button>
+        <br></br>
     </div>
   )
 }
