@@ -11,7 +11,7 @@ import award3 from "../../../assets/images/Home_Assets/award3.png";
 
 const awards = [
   {
-    title: "Emerging C & I Solar Player 2025 Award",
+    title: "Emerging C & I Solar Player 2025",
     description: "Recognized for our commitment to Customer Centricity and Sustainability.",
     image: award1,
     alt: "Award Ceremony Image",
@@ -73,8 +73,8 @@ const LatestNews = () => {
               <SwiperSlide key={index}>
                 <article className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300 flex flex-col h-full min-h-[430px]"
                 style={{ boxShadow: "0 4px 20px rgba(34, 197, 94, 0.3)" }}>
-                  <div className="p-5 flex-1 flex flex-col justify-between">
-                    <h3 className="text-xl font-semibold text-center mb-2">
+                  <div className="p-5 flex-1 flex flex-col justify-between items-center">
+                    <h3 className="text-xl font-semibold text-center mb-2 w-[90%]">
                       {award.title}
                     </h3>
                     <p className="text-[17px] text-gray-600 text-center">

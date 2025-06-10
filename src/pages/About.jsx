@@ -1,5 +1,6 @@
 import React, { useEffect, Suspense, lazy } from 'react';
 import { motion } from 'framer-motion';
+import EthicalValues from '../components/core/AboutPage/EthicalValues';
 
 const HeroSection = lazy(() => import('../components/core/HeroSection'));
 const FoundingStory = lazy(() => import('../components/core/AboutPage/FoundingStory'));
@@ -24,6 +25,7 @@ const About = () => {
           <MissionVision />
           <Leaders />
           <Values />
+          {/* <EthicalValues /> */}
           <ClientSlider />
           <Footer />
         </motion.div>
