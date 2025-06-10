@@ -73,7 +73,7 @@ const LatestNews = () => {
               <SwiperSlide key={index}>
                 <article className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300 flex flex-col h-full min-h-[430px]"
                 style={{ boxShadow: "0 4px 20px rgba(34, 197, 94, 0.3)" }}>
-                  <div className="p-5 flex-1 flex flex-col justify-between items-center">
+                  <div className="p-5 flex flex-col justify-between items-center">
                     <h3 className="text-xl font-semibold text-center mb-2 w-[90%]">
                       {award.title}
                     </h3>
