@@ -93,6 +93,16 @@ function App() {
             about={Leader[4].about}
         />} />
 
+        <Route 
+          path='/tarun-gupta' 
+          element={<LeadersTemplate 
+            name={Leader[5].name} 
+            designation={Leader[5].designation}
+            image={Leader[5].image} 
+            property={"-right-70"}
+            about={Leader[5].about}
+        />} />
+
         <Route path='*' element={<NotFound />} />
 
       </Routes>

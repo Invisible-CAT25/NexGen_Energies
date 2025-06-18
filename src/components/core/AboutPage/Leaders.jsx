@@ -7,7 +7,7 @@ import leader2 from "../../../assets/images/About_Assets/leader2.png";
 import leader3 from "../../../assets/images/About_Assets/leader3.png";
 import leader4 from "../../../assets/images/About_Assets/leader4.png";
 import leader5 from "../../../assets/images/About_Assets/leader5.png";
-import icon from "../../../assets/images/About_Assets/join_icon.png";
+import leader6 from "../../../assets/images/About_Assets/leader6.png";
 import { Link } from "react-router-dom";
 
 const leaders = [
@@ -40,6 +40,12 @@ const leaders = [
     name: "Hemraj Katariya",
     role: "CTO",
     link: "/hemraj-katariya",
+  },
+  {
+    image: leader6,
+    name: "Tarun Gupta",
+    role: "SCM Head",
+    link: "/tarun-gupta",
   },
 ];
 
@@ -100,22 +106,7 @@ const Leaders = () => {
           </motion.div>
         ))}
 
-        {/* Join Our Team Card */}
-        <motion.div
-          className="bg-gradient-to-b from-[#5078B9] to-[#4BBB93] rounded-xl shadow-lg p-6 text-center hover:shadow-2xl transition duration-300 "
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-        >
-            <Link
-              to="/careers"
-              className="flex flex-col items-center gap-6 justify-center w-full h-full"
-              aria-label={`Go to Join Our Team Page`}
-            >
-                <img src={icon} alt="Join Our Team" className="w-30 h-20" loading="lazy" />
-                <h3 className="text-3xl font-bold text-white">Join Our Team</h3>
-            </Link>
-        </motion.div>
+        
       </motion.div>
     </section>
   );

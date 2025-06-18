@@ -3,6 +3,7 @@ import image2 from '../assets/images/About_Assets/leader2.png'
 import image3 from '../assets/images/About_Assets/leader3.png'
 import image4 from '../assets/images/About_Assets/leader4.png'
 import image5 from '../assets/images/About_Assets/leader5.png'
+import image6 from '../assets/images/About_Assets/leader6.png'
 
 export const Leader = [
     {
@@ -103,4 +104,24 @@ export const Leader = [
             "His commitment to operational excellence and forward-looking leadership continues to elevate NexGen’s position as a reliable and innovative service partner in the telecom and infrastructure industry."              
         ]
     },
-]
+    {
+        name: "TARUN GUPTA",
+        designation: "-SCM Head",
+        image: image6,
+        about:[
+            "Hemraj Kattariya is a dynamic and accomplished professional with over 15 years of experience in Business Operations, Service Delivery, Process Management, and Strategic Leadership within the telecommunications and infrastructure sectors. As the Chief Technology Officer (CTO) at NexGen Digital Infrastructures, he plays a pivotal role in shaping the company’s operational roadmap and technology strategy, while ensuring excellence in service delivery across India.",
+            "Hemraj leads a pan-India team of over 120 professionals, directly reporting to the Managing Director, and oversees end-to-end operations and service delivery for leading Telecom OEMs and Service Providers. He is known for his ability to balance strategic planning with operational execution, delivering consistent value to clients and stakeholders.",
+            "Key Responsibilities at NexGen:",
+            ["Leading nationwide service delivery operations with a focus on efficiency, quality, and client satisfaction",
+              "Driving operational strategy and technological execution, ensuring alignment with business growth objectives",
+              "Managing vendor relationships, performance contracts, and process optimization across multi-location projects",
+              "Developing and mentoring high-performing teams while instilling a culture of accountability and innovation",
+              "Ensuring seamless execution of customer-centric solutions, meeting SLAs and compliance standards",
+              "Spearheading project management initiatives, resource planning, and operational governance",
+              "Collaborating with leadership for business development and strategic partnerships"
+            ],
+            "Hemraj is a results-driven technology leader with a strong foundation in people management, scalable operations, and client engagement. He aspires to take on increasingly challenging leadership roles in Service Delivery, Operations Management, and Customer Relationship Management, with a vision to drive business transformation and growth.",
+            "His commitment to operational excellence and forward-looking leadership continues to elevate NexGen’s position as a reliable and innovative service partner in the telecom and infrastructure industry."              
+        ]
+    },
+]                               

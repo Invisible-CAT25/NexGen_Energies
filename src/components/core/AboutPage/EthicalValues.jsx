@@ -1,4 +1,15 @@
+import React from "react";
 import { motion } from "framer-motion";
+import HighlightText from "../../common/HighlightText";
+
+import e from "../../../assets/images/About_Assets/e.png";
+import t from "../../../assets/images/About_Assets/t.png";
+import h from "../../../assets/images/About_Assets/h.png";
+import i from "../../../assets/images/About_Assets/i.png";
+import c from "../../../assets/images/About_Assets/c.png";
+import a from "../../../assets/images/About_Assets/a.png";
+import l from "../../../assets/images/About_Assets/l.png";
+
 import { FaUsers, FaBalanceScale, FaLightbulb, FaUserTie, FaUserShield, FaInfinity, FaFistRaised } from "react-icons/fa";
 
 const values = [
@@ -6,43 +17,43 @@ const values = [
     title: "Empowerment",
     description:
       "By empowering every team member, we fuel innovation, encourage bold ideas, value every voice and drive collective success.",
-    icon: <FaFistRaised className="text-2xl text-teal-600" />,
+    icon: e,
   },
   {
     title: "Team Work",
     description:
       "Collaboration fuels our teamwork, helping us harness diverse ideas and achieve powerful outcomes together.",
-    icon: <FaUsers className="text-2xl text-teal-600" />,
+    icon: t,
   },
   {
     title: "Honesty",
     description:
       "Integrity builds trust, strengthens partnerships, and shapes our reputation through honesty and accountability.",
-    icon: <FaBalanceScale className="text-2xl text-teal-600" />,
+    icon: h,
   },
   {
     title: "Innovative",
     description:
       "Innovation drives progress. By fostering creativity, agility, and forward-thinking, we meet evolving needs with impactful, future-ready solutions.",
-    icon: <FaLightbulb className="text-2xl text-teal-600" />,
+    icon: i,
   },
   {
     title: "Customer-Centric",
     description:
       "Clients are our core. By prioritizing their evolving needs and exceeding expectations, we build trusted relationships that drive meaningful growth.",
-    icon: <FaUserTie className="text-2xl text-teal-600" />,
+    icon: c,
   },
   {
     title: "Accountability",
     description:
       "Owning our actions end-to-end strengthens culture, deepens stakeholder trust, and fuels promise-driven performance. Accountability is our foundation.",
-    icon: <FaUserShield className="text-2xl text-teal-600" />,
+    icon: a,
   },
   {
     title: "Limitless",
     description:
       "We believe in growth without boundaries. By fostering a limitless mindset, we challenge ourselves to push for excellence and explore new possibilities.",
-    icon: <FaInfinity className="text-2xl text-teal-600" />,
+    icon: l,
   },
 ];
 
@@ -53,7 +64,7 @@ export default function EthicalValues() {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="text-4xl font-bold text-center mb-12 text-gradient bg-gradient-to-r from-blue-600 to-green-500 text-transparent bg-clip-text"
+        className="text-4xl font-bold text-center mb-12 text-gradient bg-gradient-to-r from-richblue to-richgreen text-transparent bg-clip-text"
       >
         Our Values
       </motion.h2>
@@ -84,10 +95,11 @@ export default function EthicalValues() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
               className="bg-white rounded-2xl shadow p-5 flex gap-4 items-start hover:shadow-lg transition-shadow"
             >
-              <div className="shrink-0">{value.icon}</div>
+              {/* <div className="shrink-0">{value.icon}</div> */}
+              <img src={value.icon} /> 
               <div>
                 <h3 className="text-lg font-semibold text-gray-800">{value.title}</h3>
                 <p className="text-gray-600 text-sm mt-1">{value.description}</p>
